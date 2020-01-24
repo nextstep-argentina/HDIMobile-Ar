@@ -1,4 +1,8 @@
-<GridLayout columns="*" rows="auto, *">
+<Page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:pdf="nativescript-pdf-view"
+  loaded="pageLoaded">
+  <GridLayout columns="*" rows="auto, *">
     <GridLayout row="0" col="0" rows="auto" columns="*,auto,*"  padding="{{layout.ActionBar.padd}}">
         <StackLayout row="0" col="0" padding="{{layout.HistButt.padd}}" >
             <Button text="{{angleLeft}}" class="icon HistButt" width="{{layout.HistButt.w}}" height="100%" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()" verticalAlignment="middle" horizontalAlignment="left"></Button>
@@ -10,3 +14,4 @@
     </GridLayout>
     <PDFView row="1" col="0" [src]="src" (load)="onLoad()"></PDFView>
 </GridLayout>
+</Page>

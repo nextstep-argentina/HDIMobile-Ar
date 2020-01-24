@@ -9,7 +9,7 @@
         <StackLayout row="0" col="2"></StackLayout>
     </GridLayout>
     <GridLayout row="1" col="0" columns="*" rows="auto, *, auto" class="page GridVisorQr" backgroundColor="white">
-            <StackLayout row="0" col="0" color="white" paddingTop="{{layout.titPrinc.paddT}}" paddingBottom="{{layout.titPrinc.paddB}}" backgroundColor="#009c33">
+            <StackLayout row="0" col="0" color="white" paddingTop="{{layout.titPrinc.paddT}}" paddingBottom="{{layout.titPrinc.paddB}}" backgroundColor="#006729">
                 <Label text="{{codigoQR}}&#x000a;" class="icon" fontSize="{{layout.titPrinc.icon1}}" textAlignment="center" marginBottom="{{layout.general.sep}}"></Label>
                 <Label text="Visualizar código QR" fontWeight="Bold" fontSize="{{layout.general.h1}}" textAlignment="center"></Label>
             </StackLayout>
@@ -17,7 +17,7 @@
                 <StackLayout height="{{layout.ImgQr.h}}">
                     <Image [src]="img"></Image>
                 </StackLayout>
-                <StackLayout width="40%" backgroundColor="#009c33" height="{{layout.buttQr.h}}" borderRadius="2" marginTop="{{layout.buttQr.mt}}">
+                <StackLayout width="40%" backgroundColor="#006729" height="{{layout.buttQr.h}}" borderRadius="2" marginTop="{{layout.buttQr.mt}}">
                     <Button class="buttQr" borderRadius="2" (tap)="compartir()">
                         <Span text="{{icoShare}}" class="icon" fontSize="{{layout.buttQr.icon1}}"></Span>
                         <Span text=" COMPARTIR" fontSize="{{layout.buttQr.t1}}"></Span>

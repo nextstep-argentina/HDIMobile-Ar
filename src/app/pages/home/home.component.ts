@@ -15,7 +15,7 @@ import { Page } from "tns-core-modules/ui/page/page";
 export class HomeComponent implements OnInit {
 
     public texto;
-    
+
     public icoCar;
     public icoTaller;
     public fileText;
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
         'titPrinc' : {
             't1' : 2.25,
             'paddT' : 2,
-            'paddB' : 2           
+            'paddB' : 2
         },
         'GridLayout' : {
             'row0' : 1,
@@ -50,11 +50,11 @@ export class HomeComponent implements OnInit {
         },
         'buttHome' : {
             'height' : 9.5,
-            'paddL' : 15,
-            'paddLIco' : 1.5,
-            'paddRIco' : 1.5,
-            'icon1' : 5.2,
-            'icon2' : 3,
+            'paddL' : 11,
+            'paddLIco' : 1,
+            'paddRIco' : 1,
+            'icon1' : 4.2,
+            'icon2' : 2.5,
         },
         'buttInfo' : {
             'height' : 8.5,
@@ -65,14 +65,14 @@ export class HomeComponent implements OnInit {
             'icon2' : 3,
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         },
         'general' : {
-            'h1' : 2.25,
-            'h2' : 2,
+            'h1' : 2,
+            'h2' : 1.75,
             'h3' : 1.8,
             'h4' : 1.6,
             'sep' : 0.8
@@ -107,7 +107,7 @@ export class HomeComponent implements OnInit {
                         this.user = 'nuestra aplicación Móvil';
                     }
                 };
-            } 
+            }
         });
     }
 
@@ -122,8 +122,8 @@ export class HomeComponent implements OnInit {
         this.layout.ActionBar.padd = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.ActionBar.padd);
 
         //titPrinc
-        this.layout.titPrinc.paddT = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddT); 
-        this.layout.titPrinc.paddB = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddB);  
+        this.layout.titPrinc.paddT = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddT);
+        this.layout.titPrinc.paddB = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddB);
 
         //Button Home
         this.layout.buttHome.height = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttHome.height);
@@ -132,7 +132,7 @@ export class HomeComponent implements OnInit {
         this.layout.buttHome.paddRIco = this._appGlobal.screenRes(phoneW, this.screen.scale, this.layout.buttHome.paddRIco);
         this.layout.buttHome.icon1 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttHome.icon1);
         this.layout.buttHome.icon2 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttHome.icon2);
-        
+
         //Button Info
         this.layout.buttInfo.height = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttInfo.height);
         this.layout.buttInfo.paddL = this._appGlobal.screenRes(phoneW, this.screen.scale, this.layout.buttInfo.paddL);
@@ -170,7 +170,7 @@ export class HomeComponent implements OnInit {
         this.icoSSN = String.fromCharCode(0xe922);
         this.icoPoliza = String.fromCharCode(0xe915);
         this.icoDownload = String.fromCharCode(0xe91c);
-        this.icoInfo = String.fromCharCode(0xea0d); 
+        this.icoInfo = String.fromCharCode(0xea0d);
     }
 
     onButtonTap(): void {

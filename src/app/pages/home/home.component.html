@@ -13,38 +13,38 @@
                         <GridLayout row="1" col="0" columns="*" rows="auto, auto, auto, auto, auto" class="ListMenu" height="auto">
                                 <GridLayout row="0" col="0" columns="*, *" rows="*" height="{{layout.buttHome.height}}">
                                     <Label text="{{icoPoliza}}" row="0" col="0" class="icon" color="black" verticalAlignment="center" paddingLeft="{{layout.buttHome.paddLIco}}" fontSize="{{layout.buttHome.icon1}}"></Label>
-                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#009c33" verticalAlignment="middle" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
+                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#006729" verticalAlignment="middle" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
                                 </GridLayout>
                                 <Button row="0" col="0" textAlignment="left" (tap)="goPolizas()" class="buttHome" paddingLeft="{{layout.buttHome.paddL}}" height="{{layout.buttHome.height}}" [nsRouterLink]="['/polizas']" verticalAlignment="middle" textWrap="true">
                                         <Span text="Mis Pólizas - Automóviles&#x000a;" color="#007125" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                        <Span text="Información de sus pólizas" color="#009c33" fontSize="{{layout.general.h2}}"></Span>
+                                        <Span text="Información de sus pólizas" color="#006729" fontSize="{{layout.general.h2}}"></Span>
                                 </Button>
                                 <GridLayout row="1" col="0" columns="*, *" rows="*" height="{{layout.buttHome.height}}">
                                     <Label text="{{icoCar}}" row="0" col="0" class="icon" color="black" verticalAlignment="center" paddingLeft="{{layout.buttHome.paddLIco}}" fontSize="{{layout.buttHome.icon1}}"></Label>
-                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#009c33" verticalAlignment="center" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
+                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#006729" verticalAlignment="center" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
                                 </GridLayout>
                                 <Button row="1" col="0" textAlignment="left" (tap)="onButtonTap()" class="buttHome" paddingLeft="{{layout.buttHome.paddL}}" height="{{layout.buttHome.height}}" [nsRouterLink]="['/siniestroAuto']" verticalAlignment="middle" textWrap="true">
                                         <Span text="¿Accidente con su vehículo?&#x000a;" color="#007125" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                        <Span text="¿Qué hacer en caso de siniestro?" color="#009c33" fontSize="{{layout.general.h2}}"></Span>
+                                        <Span text="¿Qué hacer en caso de siniestro?" color="#006729" fontSize="{{layout.general.h2}}"></Span>
                                 </Button>
                                 <GridLayout row="2" col="0" columns="*, *" rows="*" height="{{layout.buttHome.height}}">
                                     <Label text="{{icoDownload}}" row="0" col="0" class="icon" color="black" verticalAlignment="center" paddingLeft="{{layout.buttHome.paddLIco}}" fontSize="{{layout.buttHome.icon1}}"></Label>
-                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#009c33" verticalAlignment="middle" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
+                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#006729" verticalAlignment="middle" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
                                 </GridLayout>
                                 <Button row="2" col="0" textAlignment="left" class="buttHome" paddingLeft="{{layout.buttHome.paddL}}" height="{{layout.buttHome.height}}" [nsRouterLink]="['/registro']" verticalAlignment="middle" textWrap="true">
                                         <Span text="Importar&#x000a;" color="#007125" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                        <Span text="Datos de otra póliza relacionada" color="#009c33" fontSize="{{layout.general.h2}}"></Span>
+                                        <Span text="Datos de otra póliza relacionada" color="#006729" fontSize="{{layout.general.h2}}"></Span>
                                 </Button>
                                 <GridLayout row="3" col="0" columns="*, *" rows="*" height="{{layout.buttHome.height}}">
                                     <Label text="{{icoInfo}}" row="0" col="0" class="icon" color="black" verticalAlignment="center" paddingLeft="{{layout.buttHome.paddLIco}}" fontSize="{{layout.buttHome.icon1}}"></Label>
-                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#009c33" verticalAlignment="middle" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
+                                    <Label text="{{angleRight}}" row="0" col="1" class="icon" color="#006729" verticalAlignment="middle" textAlignment="right" paddingRight="{{layout.buttHome.paddRIco}}}" fontSize="{{layout.buttHome.icon2}}"></Label>
                                 </GridLayout>
                                 <Button row="3" col="0" textAlignment="left" class="buttHomeWhite" paddingLeft="{{layout.buttHome.paddL}}" height="{{layout.buttHome.height}}" [nsRouterLink]="['/homeInfo']" verticalAlignment="middle" textWrap="true">
                                         <Span text="Información Útil&#x000a;" color="#007125" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                        <Span text="Talleres, Teléfonos, Legales" color="#009c33" fontSize="{{layout.general.h2}}"></Span>
+                                        <Span text="Talleres, Teléfonos, Legales" color="#006729" fontSize="{{layout.general.h2}}"></Span>
                                 </Button>
                             </GridLayout>
-                </StackLayout>              
+                </StackLayout>
             </ScrollView>
             <StackLayout row="2" col="0" height="100%" color="white" verticalAlignment="bottom" marginBottom="{{layout.footer.paddB}}">
                 <Label text="{{icoSSN}}" class="icon" textAlignment="center" fontSize="{{layout.footer.ssn}}"></Label>

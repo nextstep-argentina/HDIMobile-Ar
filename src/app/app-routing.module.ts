@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: "siniestroAuto", loadChildren: () => import("~/app/pages/siniestroAuto/siniestroAuto.module").then((m) => m.SiniestroAutoModule) },
     { path: "infoUtil", loadChildren: () => import("~/app/pages/infoUtil/infoUtil.module").then((m) => m.InfoUtilModule) },
     { path: "polizas", loadChildren: () => import("~/app/pages/polizas/polizas.module").then((m) => m.PolizasModule) },
-    { path: "productor", loadChildren: () => import("~/app/pages/productor/productor.module").then((m) => m.ProductorModule) },
+    { path: "productor/:id/:pos", loadChildren: () => import("~/app/pages/productor/productor.module").then((m) => m.ProductorModule) },
     { path: "poliza/:id/:pos/:pos2", loadChildren: () => import("~/app/pages/poliza/poliza.module").then((m) => m.PolizaModule) },
     { path: "polizaDorso", loadChildren: () => import("~/app/pages/polizaDorso/polizaDorso.module").then((m) => m.PolizaDorsoModule) },
     { path: "polizaDorso/:id/:pos/:pos2", loadChildren: () => import("~/app/pages/polizaDorso/polizaDorso.module").then((m) => m.PolizaDorsoModule) },

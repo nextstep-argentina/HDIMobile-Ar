@@ -1,32 +1,33 @@
 .page{
-    background-color: #009c33;
+    background-color: #006729;
 }
 TextView {
     border-width: 2;
-    border-color: #009c33;
+    border-color: #006729;
 }
 .TextViewWhite{
    border-width: 2;
-   border-color: white; 
+   border-color: white;
 }
 .TextUpperCase{
     text-transform: uppercase;
 }
 .Uline1{
    border-width: 1 1 2 1;
-   border-color: #fff #fff #d2d3d4 #fff;  
+   border-color: #fff #fff #d2d3d4 #fff;
 }
 .Uline2{
     border-width: 0 0 2 0;
-    border-color: #fff #fff #0c6800 #fff;  
+    border-color: #fff #fff #0c6800 #fff;
 }
 .icon {
-   font-family: 'icomoon';  
+   font-family: 'icomoon';
 }
 .HistButt{
     background-color: transparent;
-    color: #009c33;
-    border-width: 1 1 2 1;
-    border-color: #fff #fff #fff #fff;
+    color: #006729;
+    border-width: 1 1 1 1;
+    border-color: transparent transparent transparent transparent;
+    android-elevation: 0;
 }
 @import '~nativescript-theme-core/css/core.light.css';
