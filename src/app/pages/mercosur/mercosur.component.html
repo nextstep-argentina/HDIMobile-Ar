@@ -1,0 +1,141 @@
+<GridLayout rows="*" backgroundColor="white" #GridCard>
+    <StackLayout row="0" col="0"  verticalAlignment="middle" textAlignment="center">
+        <Button text="{{angleLeft}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()"></Button>
+    </StackLayout>
+    <ScrollView row="0" col="1" orientation="vertical" verticalAlignment="middle">
+        <GridLayout columns="*, auto" rows="auto, auto, auto" class="card" paddingTop="{{layout.card.paddT}}" paddingBottom="{{layout.card.paddB}}">
+            <TextView row="0" col="0" colSpan="2" editable="false" backgroundColor="#009c33" paddingLeft="{{layout.card.paddL}}">
+                <FormattedString>
+                    <Span text="MERCOSUL / MERCOSUR" color="white" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                    <Span text="Certificado de apólice de seguro de responsabilidade civil do propietario e/ou conductor de vehículos de passeio ou de aluguel não matriculados no país de ingresso em viagem internacional. Danos causados a pessoas ou objetos não transportados. / Certificado de póliza única de seguro de responsabilidad civil del propietario y/o conductor de vehículos de paseo o de alquiler no matriculados en el país de ingreso en viaje internacional. Daños causados a personas o cosas no transportadas." color="black" fontSize="{{layout.general.h4}}"></Span>
+                </FormattedString>
+            </TextView>
+            <StackLayout row="1" col="0" colSpan="2" backgroundColor="#ebebeb">
+                <GridLayout columns="2*, 1*, 1*" rows="auto, auto, auto">
+                    <TextView row="0" col="0" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="SEGURADORA / ASEGURADORA:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Aseguradora}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="0" col="1" colSpan="2" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="PAÍS:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Pais}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="1" col="0" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="SEGURADO / ASEGURADO:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Asegurado}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="1" col="1" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="APÓLICE Nº / PÓLIZA Nº:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.PolizaNro}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="1" col="2" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="CERTIFICADO Nº:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.CertificadoNro}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="2" col="0" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="ENDERECO / DIRECCIÓN:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Domicilio}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="2" col="1" colSpan="2" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="VIGÉNCIA / VALIDEZ:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Vigencia}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                </GridLayout>
+                <GridLayout columns="*, *, *" rows="auto, auto, auto">
+                    <TextView row="0" colSpan="3" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="VEÍCULO / VEHÍCULO" fontWeight="Bold" fontSize="{{layout.general.h2}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="1" col="0" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="MARCA / MARCA:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Marca}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="1" col="1" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="MODELO / MODELO:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Modelo}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="1" col="2" editable="false" class="cardTextView" paddingBottom="0" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="ANO / AÑO:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Anio}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="2" col="0" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="PLACA Nº / MATRÍCULA:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Matricula}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="2" col="1" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="MOTOR Nº / MOTOR Nº:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Motor}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="2" col="2" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="CHASSIS Nº / CHASIS Nº:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Chasis}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout row="2" col="0" colSpan="2" class="cardInfo">
+                <GridLayout columns="*, *" rows="auto, auto, auto, auto">
+                    <TextView row="0" col="0" colSpan="2" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="Certifica que o veículo cujos datos enumeram-se anteriormente está amparado no risco de responsabilidade civil, segundo os valores e condições establecidas na Resolução do Grupo Mercado Comum para os países integrantes del Mercosul.&#x000a;Certifica que el vehículo, cuyos datos se detallan anteriormente, se encuentra amparado en el riesgo de responsabilidad civil conforme a los montos y condiciones establecidas en la Resolución del Grupo Mercado Común a los países integrantes del Mercosur." fontSize="{{layout.general.h5}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="1" col="0" colSpan="2" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="Esta cobertura comprende os siguientes países / Esta cobertura comprende los siguientes países:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Paises}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="2" col="0" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="CIDADE / CIUDAD:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="Buenos Aires" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="2" col="1" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="DATA / FECHA:&#x000a;" fontSize="{{layout.general.h5}}"></Span>
+                            <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Fecha}}" fontSize="{{layout.general.h3}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <TextView row="3" col="0" colSpan="2" editable="false"  class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="{{icoFirma}}&#x000a;" class="icon" fontSize="{{layout.firma.h1}}"></Span>
+                            <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                            <Span text="HDI Seguros S.A." fontSize="{{layout.general.h4}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                </GridLayout>
+            </StackLayout>
+        </GridLayout>
+    </ScrollView>
+    <StackLayout row="0" col="2">
+    </StackLayout>
+</GridLayout>

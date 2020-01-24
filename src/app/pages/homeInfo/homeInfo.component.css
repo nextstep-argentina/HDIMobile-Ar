@@ -1,0 +1,26 @@
+.GridHome{
+    width: 80%;
+    height: 100%;
+}
+.ListMenu{
+    width: 100%;
+    padding: 8 15;
+}
+.buttHome{
+    background-color: transparent;
+    border-width: 1 1 2 1;
+    border-color: #fff #fff #d1d2d3 #fff;
+}
+.buttHomeWhite{
+    background-color: transparent;
+    border-width: 1 1 2 1;
+    border-color: #fff #fff #fff #fff;
+}
+.buttInfoUtil{
+    border-width: 0 0 2px 0;
+    border-color: white;
+    background-color: transparent;
+}
+.buttInfoUtil:active{
+    background-color: #00862c;
+}

@@ -1,0 +1,69 @@
+<GridLayout rows="*" backgroundColor="white" #GridCard>
+    <StackLayout row="0" col="0"  verticalAlignment="middle" textAlignment="center">
+        <Button text="{{angleLeft}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()"></Button>
+    </StackLayout>
+    <ScrollView row="0" col="1" orientation="vertical" verticalAlignment="middle">
+        <GridLayout columns="*, auto" rows="auto, *" paddingTop="{{layout.card.paddT}}" paddingBottom="{{layout.card.paddB}}">
+            <TextView row="0" col="0" editable="false" backgroundColor="#009c33" paddingLeft="{{layout.card.paddL}}">
+                <FormattedString>
+                    <Span text="Seguro Obligatorio Automotor" color="white" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                    <Span text="Decreto 1716/08 Reglamentario de la Ley Nacional de Tránsito y Seguridad vial N° 26363" fontWeight="Bold" color="black" fontSize="{{layout.general.h2}}"></Span>
+                </FormattedString>
+            </TextView>
+            <StackLayout row="0" col="1" verticalAlignment="middle">
+                <Image src="~/images/logo-white.png" height="{{layout.card.logo}}"></Image>
+            </StackLayout>
+            <GridLayout row="1" col="0" colSpan="2" columns="*, *" rows="auto, auto, *" backgroundColor="#ebebeb">
+                <TextView row="0" col="0" colSpan="2" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}" paddingBottom="0">
+                    <FormattedString>
+                        <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Asegurado}}" fontWeight="Bold" color="black" fontSize="{{layout.general.h1}}"></Span>
+                    </FormattedString>
+                </TextView>
+                <TextView row="1" col="0" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}" paddingBottom="0" fontSize="{{layout.general.h2}}">
+                    <FormattedString color="black">
+                        <Span text="POLIZA: {{poliza.Certificados[polizaPos2].DatosMercosur.PolizaNro}}&#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="TIPO: AUTOMOVIL&#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="DOMINIO: {{poliza.Certificados[polizaPos2].DatosMercosur.Matricula}}&#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="AÑO: {{poliza.Certificados[polizaPos2].TarjetaCirculacion.Anio}}"></Span>
+                    </FormattedString>
+                </TextView>
+                <TextView row="1" col="1" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}" paddingBottom="0" fontSize="{{layout.general.h2}}">
+                    <FormattedString color="black">
+                        <Span text="VIGENCIA DE LA COBERTURA&#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="Desde 12 hs: {{poliza.Certificados[polizaPos2].TarjetaCirculacion.Desde}}&#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="Hasta 12 hs: {{poliza.Certificados[polizaPos2].TarjetaCirculacion.Hasta}}&#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="ASISTENCIA: {{poliza.Certificados[polizaPos2].TarjetaCirculacion.Asistencia}}"></Span>
+                    </FormattedString>
+                </TextView>
+                <TextView row="2" col="0" colSpan="2" editable="false" paddingTop="0" class="cardTextView" paddingLeft="{{layout.card.paddL}}" fontSize="{{layout.general.h2}}">
+                    <FormattedString color="black">
+                        <Span text="MARCA: {{poliza.Certificados[polizaPos2].DatosMercosur.Marca}} {{poliza.Certificados[polizaPos2].DatosMercosur.Modelo}} &#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="CARROCERIA: {{poliza.Certificados[polizaPos2].DatosMercosur.Chasis}}&#x000a;"></Span>
+                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                        <Span text="MOTOR: {{poliza.Certificados[polizaPos2].DatosMercosur.Motor}}"></Span>
+                    </FormattedString>
+                </TextView>
+                <StackLayout row="2" col="1" verticalAlignment="bottom" textAlignment="center">
+                    <TextView editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
+                        <FormattedString color="black">
+                            <Span text="{{icoFirma}}&#x000a;" class="icon" fontSize="{{layout.firma.h1}}"></Span>
+                            <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                            <Span text="HDI Seguros S.A." fontSize="{{layout.general.h4}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                </StackLayout>
+            </GridLayout>
+        </GridLayout>
+    </ScrollView>
+    <StackLayout row="0" col="2"  verticalAlignment="middle" textAlignment="center">
+        <Button text="{{angleRight}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" [nsRouterLink]="['/polizaDorso', polizaID, polizaPos, polizaPos2]"></Button>
+    </StackLayout>
+</GridLayout>

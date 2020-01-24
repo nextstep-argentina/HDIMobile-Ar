@@ -1,0 +1,31 @@
+<GridLayout columns="*" rows="auto, *">
+    <GridLayout row="0" col="0" rows="auto" columns="*,auto,*"  padding="{{layout.ActionBar.padd}}">
+        <StackLayout row="0" col="0" padding="{{layout.HistButt.padd}}" >
+            <Button text="{{angleLeft}}" class="icon HistButt" width="{{layout.HistButt.w}}" height="100%" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()" verticalAlignment="middle" horizontalAlignment="left"></Button>
+        </StackLayout>
+        <StackLayout row="0" col="1">
+            <Image src="~/images/logo.png" width="auto" height="{{layout.ActionBar.logo}}" horizontalAlignment="center"></Image>
+        </StackLayout>
+        <StackLayout row="0" col="2"></StackLayout>
+    </GridLayout>
+    <GridLayout row="1" col="0" columns="*" rows="auto, *, auto" class="page GridVisorQr" backgroundColor="white">
+            <StackLayout row="0" col="0" color="white" paddingTop="{{layout.titPrinc.paddT}}" paddingBottom="{{layout.titPrinc.paddB}}" backgroundColor="#009c33">
+                <Label text="{{codigoQR}}&#x000a;" class="icon" fontSize="{{layout.titPrinc.icon1}}" textAlignment="center" marginBottom="{{layout.general.sep}}"></Label>
+                <Label text="Visualizar código QR" fontWeight="Bold" fontSize="{{layout.general.h1}}" textAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout row="1" col="0" verticalAlignment="middle">
+                <StackLayout height="{{layout.ImgQr.h}}">
+                    <Image [src]="img"></Image>
+                </StackLayout>
+                <StackLayout width="40%" backgroundColor="#009c33" height="{{layout.buttQr.h}}" borderRadius="2" marginTop="{{layout.buttQr.mt}}">
+                    <Button class="buttQr" borderRadius="2" (tap)="compartir()">
+                        <Span text="{{icoShare}}" class="icon" fontSize="{{layout.buttQr.icon1}}"></Span>
+                        <Span text=" COMPARTIR" fontSize="{{layout.buttQr.t1}}"></Span>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout row="2" col="0" color="black"  verticalAlignment="bottom" marginBottom="{{layout.footer.paddB}}" verticalAlignment="bottom">
+                <Label text="{{icoSSN}}" class="icon" textAlignment="center" fontSize="{{layout.footer.ssn}}"></Label>
+            </StackLayout>
+    </GridLayout>
+</GridLayout>

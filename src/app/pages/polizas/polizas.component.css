@@ -1,0 +1,16 @@
+.GridPolizas{
+    width: 100%;
+    height: 100%;
+}
+.ListButt{
+    border-width: 1 1 2 1;
+    border-color: #009c33 #009c33 #009c33 #009c33;
+    background-color: transparent;
+    color: white;
+}
+.buttUpdate{
+    background-color: transparent;
+    border-width: 1 1 2 1;
+    border-color: #009c33 #009c33 #009c33 #009c33;
+    color: white;
+}

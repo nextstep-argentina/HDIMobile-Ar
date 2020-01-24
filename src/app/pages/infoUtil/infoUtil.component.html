@@ -1,0 +1,290 @@
+<GridLayout columns="*" rows="auto, *">
+    <GridLayout row="0" col="0" rows="auto" columns="*,auto,*"  padding="{{layout.ActionBar.padd}}">
+        <StackLayout row="0" col="0" padding="{{layout.HistButt.padd}}" >
+            <Button text="{{angleLeft}}" class="icon HistButt" width="{{layout.HistButt.w}}" height="100%" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()" verticalAlignment="middle" horizontalAlignment="left"></Button>
+        </StackLayout>
+        <StackLayout row="0" col="1">
+            <Image src="~/images/logo.png" width="auto" height="{{layout.ActionBar.logo}}" horizontalAlignment="center"></Image>
+        </StackLayout>
+        <StackLayout row="0" col="2"></StackLayout>
+    </GridLayout>
+    <GridLayout row="1" col="0" columns="*" rows="auto, *" class="page GridInfoUtil">
+        <StackLayout row="0" col="0" color="white" paddingTop="{{layout.titPrinc.paddT}}" paddingBottom="{{layout.titPrinc.paddB}}" textAlignment="center">
+            <Label text="{{icoPhone}}" class="icon" fontSize="{{layout.titPrinc.icon1}}" textAlignment="center" marginBottom="{{layout.general.sep}}"></Label>
+            <Label text="Teléfonos Útiles" fontWeight="Bold" fontSize="{{layout.general.h1}}" textAlignment="center"></Label>
+        </StackLayout>
+        <ScrollView row="1" col="0" orientation="vertical" width="100%" backgroundColor="white">
+            <GridLayout columns="*" rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto" padding="{{layout.List.padd}}">
+                <Label row="0" col="0" class="Uline1" textAlignment="center" paddingBottom="{{layout.List.paddB}}">
+                    <FormattedString>
+                        <Span text="SERVICIO DE ASISTENCIA LAS 24HS." color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                    </FormattedString>
+                </Label>
+                <GridLayout row="1" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="Asistencia en viaje y al vehículo&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                            <Span text="Iké Asistencia Argentina S.A.&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="0-800-333-2927" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('08003332927')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="2" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="0-800-666-2202" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('08006662202')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="3" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="(11) 4310-8991" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('1143108991')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="4" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="Para llamar desde el exterior:&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="(54) (11) 4310-8991" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('541143108991')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <Label row="5" col="0" class="Uline1" textAlignment="center" paddingBottom="{{layout.List.paddB}}">
+                    <FormattedString>
+                        <Span text="ASISTENCIA LEGAL" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                    </FormattedString>
+                </Label>
+                <GridLayout row="6" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="Accidentes con Lesiones o Muerte&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                            <Span text="Estudio Lezzi & Varone&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="(11) 4325-7002 (rotativas)" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('1143257002')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="7" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="115-061-0668" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('1150610668')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="8" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="113-693-4819" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('1136934819')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <Label row="9" col="0" class="Uline1" textAlignment="center" paddingBottom="{{layout.List.paddB}}">
+                    <FormattedString>
+                        <Span text="SINIESTROS EN EL MERCOSUR" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                    </FormattedString>
+                </Label>
+                <GridLayout row="10" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="BRASIL&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                            <Span text="HDI Seguros S.A. - Av. Eng. Luis C. Berrini N° 901, 4° andar, Brooklin Novo, Sao Paulo&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="5511 5508-1380" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('551155081380')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="11" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="PARAGUAY&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                            <Span text="El Comercio Paraguayo S.A. - Alberdi 453, Asunción&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="(595) (21) 49-2324" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('59521492324')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="12" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="(595) (21) 49-2325" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('59521492325')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="13" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="URUGUAY&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                            <Span text="HDI Seguros S.A. - Misiones 1549, Montevideo&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="(598) (2) 916-0850" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('59829160850')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <Label row="14" col="0" class="Uline1" textAlignment="center" paddingBottom="{{layout.List.paddB}}">
+                    <FormattedString>
+                        <Span text="SINIESTROS EN ARGENTINA" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                    </FormattedString>
+                </Label>
+                <GridLayout row="15" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="HDI SEGUROS&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                            <Span text="Tte. Gral. D. Perón 650, 5° Piso (C1038AAN), Buenos Aires, Argentina&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="(11) 5300 3300" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('1153003300')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="16" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="(11) 4032 9800" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('1140329800')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="17" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="Para llamar desde el exterior:&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="(54) (11) 5300 3300" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('541153003300')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="18" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="Para llamar desde el exterior:&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="(54) (11) 4032 9800" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('541140329800')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="19" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="0800-444-4587" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('08004444587')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="20" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="Puede comunicarse por email a:&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                            <Span text="hdi@hdi.com.ar" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoEmail}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="sendEmail('hdi@hdi.com.ar')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="21" col="0" columns="*" rows="*" class="ListItem Uline1">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+                            <Span text="Lunes a Viernes de 10:00 a 13:00 hs. y de 14:00 a 17:00 hs." color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+                        </FormattedString>
+                    </TextView>
+                </GridLayout>
+                <Label row="22" col="0" class="Uline1" textAlignment="center" paddingBottom="{{layout.List.paddB}}">
+                    <FormattedString>
+                        <Span text="SISTEMAS DE RASTREO" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                    </FormattedString>
+                </Label>
+                <GridLayout row="23" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+							<Span text="Ituran&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+							<Span text="Para activar o instalar el equipo de rastreo.&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+							<Span text="0-810-444-88726" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+						</FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('081044488726')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="24" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+							<Span text="Ituran&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+							<Span text="En caso de robo.&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+							<Span text="0-810-777-1001" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+						</FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('08107771001')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="25" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+							<Span text="Lo Jack&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+							<Span text="Para activar o instalar el equipo de rastreo.&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+							<Span text="0-810-122-5652" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+						</FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('08101225652')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <GridLayout row="26" col="0" columns="*, auto" rows="*" class="Uline1" padding="{{layout.List.padd2}}">
+                    <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
+                        <FormattedString>
+							<Span text="Lo Jack&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+							<Span text="En caso de robo.&#x000a;" color="#8a8a8a" fontSize="{{layout.general.h2}}"></Span>
+							<Span text="0-800-333-0911" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+						</FormattedString>
+                    </TextView>
+                    <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                        <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call('08003330911')"></Button>
+                    </StackLayout>
+                </GridLayout>
+                <StackLayout row="27" col="0" color="black" marginTop="{{layout.footer.paddT}}" marginBottom="{{layout.footer.paddB}}">
+                    <Label text="{{icoSSN}}" class="icon" textAlignment="center" fontSize="{{layout.footer.ssn}}"></Label>
+                </StackLayout>
+            </GridLayout>
+        </ScrollView>
+    </GridLayout>
+</GridLayout>

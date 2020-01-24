@@ -1,0 +1,32 @@
+.page{
+    background-color: #009c33;
+}
+TextView {
+    border-width: 2;
+    border-color: #009c33;
+}
+.TextViewWhite{
+   border-width: 2;
+   border-color: white; 
+}
+.TextUpperCase{
+    text-transform: uppercase;
+}
+.Uline1{
+   border-width: 1 1 2 1;
+   border-color: #fff #fff #d2d3d4 #fff;  
+}
+.Uline2{
+    border-width: 0 0 2 0;
+    border-color: #fff #fff #0c6800 #fff;  
+}
+.icon {
+   font-family: 'icomoon';  
+}
+.HistButt{
+    background-color: transparent;
+    color: #009c33;
+    border-width: 1 1 2 1;
+    border-color: #fff #fff #fff #fff;
+}
+@import '~nativescript-theme-core/css/core.light.css';

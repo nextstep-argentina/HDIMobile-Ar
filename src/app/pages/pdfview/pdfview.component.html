@@ -1,0 +1,12 @@
+<GridLayout columns="*" rows="auto, *">
+    <GridLayout row="0" col="0" rows="auto" columns="*,auto,*"  padding="{{layout.ActionBar.padd}}">
+        <StackLayout row="0" col="0" padding="{{layout.HistButt.padd}}" >
+            <Button text="{{angleLeft}}" class="icon HistButt" width="{{layout.HistButt.w}}" height="100%" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()" verticalAlignment="middle" horizontalAlignment="left"></Button>
+        </StackLayout>
+        <StackLayout row="0" col="1">
+            <Image src="~/images/logo.png" width="auto" height="{{layout.ActionBar.logo}}" horizontalAlignment="center"></Image>
+        </StackLayout>
+        <StackLayout row="0" col="2"></StackLayout>
+    </GridLayout>
+    <PDFView row="1" col="0" [src]="src" (load)="onLoad()"></PDFView>
+</GridLayout>

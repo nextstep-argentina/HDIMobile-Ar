@@ -1,0 +1,68 @@
+<GridLayout columns="*" rows="auto, *">
+    <GridLayout row="0" col="0" rows="auto" columns="*,auto,*"  padding="{{layout.ActionBar.padd}}">
+        <StackLayout row="0" col="0" padding="{{layout.HistButt.padd}}" >
+            <Button text="{{angleLeft}}" class="icon HistButt" width="{{layout.HistButt.w}}" height="100%" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()" verticalAlignment="middle" horizontalAlignment="left"></Button>
+        </StackLayout>
+        <StackLayout row="0" col="1">
+            <Image src="~/images/logo.png" width="auto" height="{{layout.ActionBar.logo}}" horizontalAlignment="center"></Image>
+        </StackLayout>
+        <StackLayout row="0" col="2"></StackLayout>
+    </GridLayout>
+    <StackLayout row="1" col="0" class="page">
+        <ScrollView orientation="vertical">
+            <PreviousNextView>
+            <StackLayout verticalAlignment="top" width="80%" paddingTop="{{layout.titPrinc.paddT}}">
+                <StackLayout color="white" paddingBottom="{{layout.titPrinc.paddB}}">
+                    <Label text="Registración" fontWeight="Bold" fontSize="{{layout.general.h1}}" textAlignment="center"></Label>
+                    <Label text="Completar la siguiente información para continuar" fontSize="{{layout.general.h3}}" textAlignment="center"></Label>
+                </StackLayout>
+                <StackLayout class="form" padding="{{layout.form.padd}}" backgroundColor="#FFFFFF">
+                    <StackLayout paddingBottom="{{layout.form.inputPaddB}}">
+                        <Label text="Tipo de Documento" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                        <GridLayout columns="*,auto" rows="auto" class="page GridPolizas">
+                            <Label row="0" col="0" colSpan="2" text="{{icoDown}}" padding="{{layout.form.select}}" textAlignment="right" backgroundColor="white" class="icon" fontSize="{{layout.ListSelect.icon1}}">
+                            </Label>
+                            <Button row="0" col="0" colSpan="2" [text]="tipoDocumento" (tap)="displayActionDialog()" textAlignment="left" fontSize="{{layout.form.inputText}}" backgroundColor="transparent" class="ListSelect" paddingLeft="0" paddingRight="0" sdkExampleTitle sdkToggleNavButton></Button>
+                        </GridLayout>
+                        <StackLayout class="hr-light"></StackLayout>
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <Label text="Nro. Documento" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                        <TextField class="inputText" required  [(ngModel)]="numeroDocumento" #documento="ngModel" keyboardType="phone" maxLength="11" paddingTop="{{layout.form.inputPaddT}}" paddingBottom="{{layout.form.inputPaddB}}" paddingLeft="0" paddingRight="0" fontSize="{{layout.form.inputText}}" returnKeyType="next"></TextField>
+                        <StackLayout class="hr-light" text="error nro. de Documento"></StackLayout>
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <Label text="Fecha Nacimiento" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                        <MaskedTextField class="inputText" required mask="99-99-9999" [(ngModel)]="fechaNacimiento" #nacimiento="ngModel" keyboardType="phone" paddingTop="{{layout.form.inputPaddT}}" paddingBottom="{{layout.form.inputPaddB}}" paddingLeft="0" paddingRight="0" fontSize="{{layout.form.inputText}}" returnKeyType="next"></MaskedTextField>
+                        <StackLayout class="hr-light"></StackLayout>
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <Label text="Email" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                        <TextField class="inputText" required  [(ngModel)]="email" #mail="ngModel" maxLength="60" paddingTop="{{layout.form.inputPaddT}}" paddingBottom="{{layout.form.inputPaddB}}" paddingLeft="0" paddingRight="0" fontSize="{{layout.form.inputText}}" autocorrect="false" returnKeyType="next"></TextField>
+                        <StackLayout class="hr-light" text="error email"></StackLayout>
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <Label text="Teléfono" paddingBottom="0" fontSize="{{layout.form.label}}"></Label>
+                        <TextField class="inputText" required  [(ngModel)]="telefono" #tel="ngModel"  keyboardType="phone"  maxLength="15" paddingTop="{{layout.form.inputPaddT}}" paddingBottom="{{layout.form.inputPaddB}}" paddingLeft="0" paddingRight="0" fontSize="{{layout.form.inputText}}" returnKeyType="done"></TextField>
+                        <StackLayout class="hr-light" text="error email"></StackLayout>
+                    </StackLayout>
+                    <GridLayout columns="*, auto" rows="auto">
+                        <StackLayout row="0" col="0">
+                            <CheckBox #CB1 text="Acepto Términos y Condiciones" checked="false"></CheckBox>
+                        </StackLayout>
+                        <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" borderRadius="2">
+                            <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/terminos']"></Button>
+                        </StackLayout>
+                    </GridLayout>
+                    <StackLayout class="input-field" backgroundColor="#009c33" width="60%" height="{{layout.form.buttHeight}}" borderRadius="2" marginTop="{{layout.form.buttMt}}">
+                        <Button text="Aceptar" (tap)="register()" width="100%" height="100%" color="white" fontSize="{{layout.form.buttText}}" class="buttRegistro" borderRadius="2"></Button>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout row="1" col="0" color="white" marginTop="{{layout.footer.paddT}}" marginBottom="{{layout.footer.paddB}}">
+                    <Label text="{{icoSSN}}" class="icon" textAlignment="center" fontSize="{{layout.footer.ssn}}"></Label>
+                </StackLayout>
+            </StackLayout>
+            </PreviousNextView>
+        </ScrollView>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,25 @@
+.buttRegistro{
+    background-color: transparent;
+    border-width: 1 1 2 1;
+    border-color: #009c33 #009c33 #009c33 #009c33;
+}
+.buttTerm{
+    background-color: transparent;
+    border-width: 1 1 2 1;
+    border-color: #ffffff #ffffff #ffffff #ffffff;
+    text-transform: initial;
+}
+.ListButt{
+    border-width: 1 1 1 1;
+    border-color: #909090 #909090 #909090 #909090;
+    background-color: transparent;
+    color:#121212;
+}
+.ListSelect{
+    border-width: 1 1 1 1;
+    border-color: #ffffff #ffffff #909090 #ffffff;
+}
+.inputText{
+    border-width: 1 1 1 1;
+    border-color: #fff #fff #d2d3d4 #fff;  
+ }

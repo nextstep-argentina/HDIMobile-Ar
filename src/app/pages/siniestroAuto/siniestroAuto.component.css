@@ -1,0 +1,10 @@
+.GridSiniestroAuto{
+    width: 80%;
+    height: 100%;
+}
+.buttIcon{
+    background-color: transparent;
+    border-width: 1 1 2 1;
+    border-color: #009c33 #009c33 #009c33 #009c33;
+    color: white;
+}
