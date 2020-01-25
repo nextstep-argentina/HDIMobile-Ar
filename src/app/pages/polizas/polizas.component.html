@@ -36,15 +36,15 @@
                                         <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/poliza', persona._id, persona.polizas.indexOf(poliza), poliza.Certificados.indexOf(certificado)]"></Button>
                                         </StackLayout>
-                                        <!--
+                                        
                                         <StackLayout row="0" col="2" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/productor', persona._id,persona.polizas.indexOf(poliza)]"></Button>
                                         </StackLayout>
-                                        -->
+                                        
                                         <StackLayout row="0" col="2" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{codigoQR}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/visorqr', persona._id,persona.polizas.indexOf(poliza), poliza.Certificados.indexOf(certificado)]"></Button>
                                         </StackLayout>
-                                        <StackLayout row="0" col="3" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                                        <StackLayout row="0" col="4" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{icoBin}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="ConfirmDeletePoliza(persona._id, persona.polizas.indexOf(poliza),poliza)"></Button>
                                         </StackLayout>
                                     </GridLayout>

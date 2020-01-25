@@ -3,11 +3,13 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { ProductorRoutingModule } from "./productor-routing.module";
 import { ProductorComponent } from "./productor.component";
+import { ServiceModule } from "~/app/services/service.module";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        ProductorRoutingModule
+        ProductorRoutingModule,
+        ServiceModule
     ],
     declarations: [
         ProductorComponent
