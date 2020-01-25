@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     templateUrl: './mercosur.component.html',
-    styleUrls: ['./mercosur.component.css'], 
+    styleUrls: ['./mercosur.component.css'],
     providers: [ AppGlobal ]
 })
 export class MercosurComponent implements OnInit{
@@ -24,12 +24,12 @@ export class MercosurComponent implements OnInit{
     public angleLeft;
     public angleRight;
     public icoFirma;
-    
+
     screen = {
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'GridLayout' : {
@@ -42,21 +42,21 @@ export class MercosurComponent implements OnInit{
             'paddL' : 3,
             'paddR' : 3,
             'paddT' : 4,
-            'paddB' : 4       
+            'paddB' : 4
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 10, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 10,
+            'h' : 7,
             'icon1' : 2.1
         },
         'general' : {
-            'h1' : 3,
-            'h2' : 2.2,
-            'h3' : 2.2,
-            'h4' : 2,
-            'h5' : 1.8,
-            'sep' : 0.8
+            'h1' : 2.75,
+            'h2' : 1.95,
+            'h3' : 1.95,
+            'h4' : 1.75,
+            'h5' : 1.55,
+            'sep' : 0.55
         },
         'firma' :{
             'h1' : 5
@@ -67,7 +67,7 @@ export class MercosurComponent implements OnInit{
         private _pageRoute: PageRoute,
         private _routerExtensions: RouterExtensions,
         private _database: Database,
-        page: Page, 
+        page: Page,
         private _appGlobal: AppGlobal,
         private _activatedRoute: ActivatedRoute
     ) {
@@ -91,7 +91,7 @@ export class MercosurComponent implements OnInit{
         gridCard.addColumn(new ItemSpec(this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.GridLayout.col0), GridUnitType.PIXEL));
         gridCard.addColumn(new ItemSpec(this.layout.GridLayout.col1, "star"));
         gridCard.addColumn(new ItemSpec(this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.GridLayout.col2), GridUnitType.PIXEL));
-        
+
         //card
         this.layout.card.logo = this._appGlobal.screenRes(phoneW, this.screen.scale, this.layout.card.logo);
         this.layout.card.paddL = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.card.paddL);

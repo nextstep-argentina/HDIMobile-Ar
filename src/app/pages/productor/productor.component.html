@@ -26,10 +26,10 @@
                             <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
                                 <FormattedString>
                                     <Span text="{{telefono.Tipo}}&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                    <Span text="{{telefono.Numero}}" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                                    <Span text="{{telefono.Numero}}" color="#006729" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                 <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="call(telefono.Numero)"></Button>
                             </StackLayout>
                         </GridLayout>
@@ -39,10 +39,10 @@
                             <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
                                 <FormattedString>
                                     <Span text="{{correo.Tipo}}&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                    <Span text="{{correo.Direccion}}" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                                    <Span text="{{correo.Direccion}}" color="#006729" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                 <Button text="{{icoEmail}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="sendEmail(correo.Direccion)"></Button>
                             </StackLayout>
                         </GridLayout>

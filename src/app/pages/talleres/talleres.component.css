@@ -4,7 +4,8 @@
 }
 .ListButt{
     border-width: 1 1 2 1;
-    border-color: #009c33 #009c33 #009c33 #009c33;
+    border-color: transparent transparent transparent transparent;
     background-color: transparent;
     color: white;
+    android-elevation: 0;
 }

@@ -1,25 +1,29 @@
 .buttRegistro{
     background-color: transparent;
     border-width: 1 1 2 1;
-    border-color: #009c33 #009c33 #009c33 #009c33;
+    border-color: transparent transparent transparent transparent;
+    android-elevation: 0;
 }
 .buttTerm{
     background-color: transparent;
     border-width: 1 1 2 1;
-    border-color: #ffffff #ffffff #ffffff #ffffff;
+    border-color: transparent transparent transparent transparent;
     text-transform: initial;
+    android-elevation: 0;
 }
 .ListButt{
     border-width: 1 1 1 1;
-    border-color: #909090 #909090 #909090 #909090;
+    border-color: transparent transparent transparent transparent;
     background-color: transparent;
     color:#121212;
+    android-elevation: 0;
 }
 .ListSelect{
     border-width: 1 1 1 1;
-    border-color: #ffffff #ffffff #909090 #ffffff;
+    border-color: transparent transparent #909090 transparent;
+    android-elevation: 0;
 }
 .inputText{
     border-width: 1 1 1 1;
-    border-color: #fff #fff #d2d3d4 #fff;  
+    border-color: #fff #fff #d2d3d4 #fff;
  }

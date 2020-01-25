@@ -13,6 +13,10 @@ android {
   defaultConfig {
     minSdkVersion 17
     generatedDensities = []
+    applicationId = "org.nativescript.hdiMobile"
+    targetSdkVersion 28
+    versionCode 8
+    versionName "4.4"
   }
   aaptOptions {
     additionalParameters "--no-version-vectors"

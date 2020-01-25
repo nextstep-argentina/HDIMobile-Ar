@@ -4,7 +4,7 @@
     </StackLayout>
     <ScrollView row="0" col="1" orientation="vertical" verticalAlignment="middle">
         <GridLayout columns="*, auto" rows="auto, *" paddingTop="{{layout.card.paddT}}" paddingBottom="{{layout.card.paddB}}">
-            <TextView row="0" col="0" editable="false" backgroundColor="#009c33" paddingLeft="{{layout.card.paddL}}">
+            <TextView row="0" col="0" editable="false" backgroundColor="#006729" paddingLeft="{{layout.card.paddL}}">
                 <FormattedString>
                     <Span text="Seguro Obligatorio Automotor" color="white" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                     <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
@@ -14,7 +14,8 @@
             <StackLayout row="0" col="1" verticalAlignment="middle">
                 <Image src="~/images/logo-white.png" height="{{layout.card.logo}}"></Image>
             </StackLayout>
-            <GridLayout row="1" col="0" colSpan="2" columns="*, *" rows="auto, auto, *" backgroundColor="#ebebeb">
+
+            <GridLayout row="1" col="0" colSpan="2" columns="*, *" rows="auto, auto, auto" backgroundColor="#ebebeb">
                 <TextView row="0" col="0" colSpan="2" editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}" paddingBottom="0">
                     <FormattedString>
                         <Span text="{{poliza.Certificados[polizaPos2].DatosMercosur.Asegurado}}" fontWeight="Bold" color="black" fontSize="{{layout.general.h1}}"></Span>
@@ -42,7 +43,8 @@
                         <Span text="ASISTENCIA: {{poliza.Certificados[polizaPos2].TarjetaCirculacion.Asistencia}}"></Span>
                     </FormattedString>
                 </TextView>
-                <TextView row="2" col="0" colSpan="2" editable="false" paddingTop="0" class="cardTextView" paddingLeft="{{layout.card.paddL}}" fontSize="{{layout.general.h2}}">
+
+                <TextView row="2" col="0" editable="false" paddingTop="0" class="cardTextView" paddingLeft="{{layout.card.paddL}}" fontSize="{{layout.general.h2}}">
                     <FormattedString color="black">
                         <Span text="MARCA: {{poliza.Certificados[polizaPos2].DatosMercosur.Marca}} {{poliza.Certificados[polizaPos2].DatosMercosur.Modelo}} &#x000a;"></Span>
                         <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
@@ -51,6 +53,7 @@
                         <Span text="MOTOR: {{poliza.Certificados[polizaPos2].DatosMercosur.Motor}}"></Span>
                     </FormattedString>
                 </TextView>
+
                 <StackLayout row="2" col="1" verticalAlignment="bottom" textAlignment="center">
                     <TextView editable="false" class="cardTextView" paddingLeft="{{layout.card.paddL}}">
                         <FormattedString color="black">
@@ -60,6 +63,7 @@
                         </FormattedString>
                     </TextView>
                 </StackLayout>
+
             </GridLayout>
         </GridLayout>
     </ScrollView>

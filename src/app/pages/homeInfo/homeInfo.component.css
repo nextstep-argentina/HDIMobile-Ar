@@ -8,13 +8,15 @@
 }
 .buttHome{
     background-color: transparent;
-    border-width: 1 1 2 1;
-    border-color: #fff #fff #d1d2d3 #fff;
+    border-width: 1 1 1 1;
+    border-color: transparent transparent #d1d2d3 transparent;
+    android-elevation: 0;
 }
 .buttHomeWhite{
     background-color: transparent;
-    border-width: 1 1 2 1;
-    border-color: #fff #fff #fff #fff;
+    border-width: 1 1 1 1;
+    border-color: transparent transparent #ffffff transparent;
+    android-elevation: 0;
 }
 .buttInfoUtil{
     border-width: 0 0 2px 0;

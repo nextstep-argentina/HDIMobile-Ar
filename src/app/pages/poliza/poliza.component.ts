@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     templateUrl: './poliza.component.html',
-    styleUrls: ['./poliza.component.css'], 
+    styleUrls: ['./poliza.component.css'],
     providers: [ AppGlobal ]
 })
 export class PolizaComponent implements OnInit{
@@ -30,7 +30,7 @@ export class PolizaComponent implements OnInit{
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'GridLayout' : {
@@ -43,26 +43,26 @@ export class PolizaComponent implements OnInit{
             'paddL' : 3,
             'paddR' : 3,
             'paddT' : 4,
-            'paddB' : 4       
+            'paddB' : 4
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 10, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 10,
+            'h' : 7,
             'icon1' : 2.1
         },
         'general' : {
-            'h1' : 3,
-            'h2' : 2.2,
-            'h3' : 2,
-            'h4' : 1.8,
-            'sep' : 0.8
+            'h1' : 2.75,
+            'h2' : 1.95,
+            'h3' : 1.95,
+            'h4' : 1.55,
+            'sep' : 0.55
         },
         'firma' :{
             'h1' : 5
         }
     }
-    
+
     constructor(
         private _pageRoute: PageRoute,
         private _routerExtensions: RouterExtensions,

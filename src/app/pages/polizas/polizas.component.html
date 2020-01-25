@@ -23,32 +23,34 @@
                                     <Span text="{{persona.nombre}}" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}" class="TextUpperCase"></Span>
                                 </FormattedString>
                             </Label>
-                            <StackLayout row="1" col="0" paddingBottom="{{layout.List.padd2}}" paddingLeft="{{layout.List.padd}}" paddingRight="{{layout.List.padd}}">                                        
+                            <StackLayout row="1" col="0" paddingBottom="{{layout.List.padd2}}" paddingLeft="{{layout.List.padd}}" paddingRight="{{layout.List.padd}}">
                                 <StackLayout *ngFor="let poliza of persona.polizas" paddingTop="{{layout.List.padd2}}" paddingBottom="{{layout.List.padd2}}">
-                                   <GridLayout *ngFor="let certificado of poliza.Certificados" columns="*, auto, auto, auto, auto" rows="*" class="Uline1" paddingTop="{{layout.List.padd2}}" paddingBottom="{{layout.List.padd2}}">
+                                   <GridLayout *ngFor="let certificado of poliza.Certificados" columns="*, auto, auto, auto" rows="*" class="Uline1" paddingTop="{{layout.List.padd2}}" paddingBottom="{{layout.List.padd2}}">
                                         <TextView row="0" col="0" editable="false" textAlignment="left" verticalAlignment="center" class="TextViewWhite" padding="{{layout.List.padd2}}">
                                             <FormattedString>
                                                 <Span text="Póliza {{certificado.DatosMercosur.PolizaNro}}&#x000a;" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                                <Span text="{{certificado.DatosMercosur.Matricula}}&#x000a;" color="#009c33" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                                                <Span text="{{certificado.DatosMercosur.Matricula}}&#x000a;" color="#006729" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                                 <Span text="{{certificado.TarjetaCirculacion.Desde}} {{certificado.TarjetaCirculacion.Hasta}}" color="#555555" fontWeight="Bold" fontSize="{{layout.general.h2}}"></Span>
                                             </FormattedString>
                                         </TextView>
-                                        <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                                        <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/poliza', persona._id, persona.polizas.indexOf(poliza), poliza.Certificados.indexOf(certificado)]"></Button>
                                         </StackLayout>
-                                        <StackLayout row="0" col="2" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                                        <!--
+                                        <StackLayout row="0" col="2" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/productor', persona._id,persona.polizas.indexOf(poliza)]"></Button>
                                         </StackLayout>
-                                        <StackLayout row="0" col="3" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                                        -->
+                                        <StackLayout row="0" col="2" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{codigoQR}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/visorqr', persona._id,persona.polizas.indexOf(poliza), poliza.Certificados.indexOf(certificado)]"></Button>
                                         </StackLayout>
-                                        <StackLayout row="0" col="4" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                                        <StackLayout row="0" col="3" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                             <Button text="{{icoBin}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="ConfirmDeletePoliza(persona._id, persona.polizas.indexOf(poliza),poliza)"></Button>
                                         </StackLayout>
-                                    </GridLayout>                    
+                                    </GridLayout>
                                 </StackLayout>
                             </StackLayout>
-                            <StackLayout row="2" col="0" width="40%" backgroundColor="#009c33" height="{{layout.buttUpdate.h}}" borderRadius="2" marginTop="{{layout.buttUpdate.mt}}">
+                            <StackLayout row="2" col="0" width="40%" backgroundColor="#006729" height="{{layout.buttUpdate.h}}" borderRadius="2" marginTop="{{layout.buttUpdate.mt}}">
                                 <Button class="buttUpdate" borderRadius="2" (tap)="actualizar(persona._id)">
                                     <Span text="{{icoReload}}" class="icon" fontSize="{{layout.buttUpdate.icon1}}"></Span>
                                     <Span text=" Actualizar" fontSize="{{layout.buttUpdate.t1}}"></Span>
@@ -71,7 +73,7 @@
                                     <Span text="Consulte las Condiciones Generales de la Póliza de Automóviles" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                             <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/pdfview','condgralauto']"></Button>
                             </StackLayout>
                         </GridLayout>
@@ -81,7 +83,7 @@
                                     <Span text="Consulte las Condiciones Generales de la Póliza de RC Automóviles" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                 <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/pdfview','condrcautoweb']"></Button>
                             </StackLayout>
                         </GridLayout>
@@ -91,7 +93,7 @@
                                     <Span text="Consulte las Condiciones Generales de los Servicios de Asistencia" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#009c33">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
                                 <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/pdfview','servasistauto']"></Button>
                             </StackLayout>
                         </GridLayout>

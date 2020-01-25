@@ -16,7 +16,7 @@ registerElement('PDFView', () => PDFView);
 
 @Component({
     templateUrl: './pdfview.component.html',
-    styleUrls: ['./pdfview.component.css'], 
+    styleUrls: ['./pdfview.component.css'],
     providers: [ AppGlobal ]
 })
 export class PdfviewComponent implements OnInit{
@@ -25,7 +25,7 @@ export class PdfviewComponent implements OnInit{
     public icoFirma;
 
     public load;
-    
+
     public src;
     public pdfList = {
         'condgralauto' : 'https://www.hdi.com.ar/wps/wcm/connect/0604da2c-0e5c-42da-b31f-1999fdb6b1bb/Condiciones+Generales+Seguro+de+Autom%C3%B3viles.pdf?MOD=AJPERES&CVID=mi5NsNC&CVID=mi5NsNC',
@@ -38,7 +38,7 @@ export class PdfviewComponent implements OnInit{
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -46,13 +46,13 @@ export class PdfviewComponent implements OnInit{
             'padd' : 1.5
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         }
     }
-    
+
     constructor(
         private _activatedRoute: ActivatedRoute,
         private _routerExtensions: RouterExtensions,
@@ -71,7 +71,9 @@ export class PdfviewComponent implements OnInit{
             this.load = new LoadingIndicator();
         };
         this.load.show();
-        this.src = this._activatedRoute.snapshot.paramMap.get('src');
+        //console.log(this._activatedRoute.snapshot.paramMap.get('src'));
+        //console.log(this.pdfList[this._activatedRoute.snapshot.paramMap.get('src')]);
+        this.src = this.pdfList[this._activatedRoute.snapshot.paramMap.get('src')];
     }
 
     ngOnInit() {
