@@ -122,7 +122,12 @@ export class MercosurComponent implements OnInit{
         this.icoFirma = String.fromCharCode(0xe925);
     }
 
-    onButtonBack() {
-        this._routerExtensions.back();
+    onButtonDorso() {
+        //this._routerExtensions.back();
+        this._routerExtensions.navigate(["/polizaDorso", this._activatedRoute.snapshot.paramMap.get('id'), this._activatedRoute.snapshot.paramMap.get('pos'), this._activatedRoute.snapshot.paramMap.get('pos2')], {
+            transition: {
+                name: 'slideRight'
+            }
+        });
     }
 }

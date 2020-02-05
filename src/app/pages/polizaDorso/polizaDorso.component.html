@@ -1,6 +1,6 @@
 <GridLayout rows="*" backgroundColor="white" #GridCard>
     <StackLayout row="0" col="0"  verticalAlignment="middle" textAlignment="center">
-        <Button text="{{angleLeft}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()"></Button>
+        <Button text="{{angleLeft}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonPoliza()"></Button>
     </StackLayout>
     <GridLayout row="0" col="1" height="100%" rows="*" columns="*" paddingTop="20" paddingBottom="20">
         <GridLayout row="0" col="0" rows="auto,*,auto" columns="*" height="100%" backgroundColor="#9ee095" class="radius" paddingTop="{{layout.card.paddT}}" paddingBottom="{{layout.card.paddB}}" paddingLeft="{{layout.card.paddL}}" paddingRight="{{layout.card.paddR}}">
@@ -20,6 +20,6 @@
         </GridLayout>
     </GridLayout>
     <StackLayout row="0" col="2"  verticalAlignment="middle" textAlignment="center">
-        <Button text="{{angleRight}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" [nsRouterLink]="['/mercosur', polizaID, polizaPos, polizaPos2]"></Button>
+        <Button text="{{angleRight}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonMercosur()"></Button>
     </StackLayout>
 </GridLayout>
