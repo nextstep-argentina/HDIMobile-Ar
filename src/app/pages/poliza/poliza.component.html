@@ -1,6 +1,6 @@
 <GridLayout rows="*" backgroundColor="white" #GridCard>
     <StackLayout row="0" col="0"  verticalAlignment="middle" textAlignment="center">
-        <Button text="{{angleLeft}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonBack()"></Button>
+        <Button text="{{angleLeft}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonPolizas()"></Button>
     </StackLayout>
     <ScrollView row="0" col="1" orientation="vertical" verticalAlignment="middle">
         <GridLayout columns="*, auto" rows="auto, *" paddingTop="{{layout.card.paddT}}" paddingBottom="{{layout.card.paddB}}">
@@ -68,6 +68,6 @@
         </GridLayout>
     </ScrollView>
     <StackLayout row="0" col="2"  verticalAlignment="middle" textAlignment="center">
-        <Button text="{{angleRight}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" [nsRouterLink]="['/polizaDorso', polizaID, polizaPos, polizaPos2]"></Button>
+        <Button text="{{angleRight}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonDorso()"></Button>
     </StackLayout>
 </GridLayout>

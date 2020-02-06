@@ -125,7 +125,21 @@ export class PolizaDorsoComponent implements OnInit{
         this.icoFirma = String.fromCharCode(0xe925);
     }
 
-    onButtonBack() {
-        this._routerExtensions.back();
+    onButtonPoliza() {
+        //this._routerExtensions.back();
+        this._routerExtensions.navigate(["/poliza", this.polizaID, this.polizaPos, this.polizaPos2], {
+            transition: {
+                name: 'slideRight'
+            }
+        });
+    }
+
+    onButtonMercosur() {
+        //this._routerExtensions.back();
+        this._routerExtensions.navigate(["/mercosur", this.polizaID, this.polizaPos, this.polizaPos2], {
+            transition: {
+                name: 'slideLeft'
+            }
+        });
     }
 }
