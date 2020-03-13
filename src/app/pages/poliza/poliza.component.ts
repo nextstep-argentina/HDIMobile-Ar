@@ -123,7 +123,6 @@ export class PolizaComponent implements OnInit{
     }
 
     onButtonPolizas() {
-        //this._routerExtensions.back();
         this._routerExtensions.navigate(["/polizas"], {
             transition: {
                 name: 'slideRight'
@@ -132,7 +131,6 @@ export class PolizaComponent implements OnInit{
     }
 
     onButtonDorso() {
-        //this._routerExtensions.back();
         this._routerExtensions.navigate(["/polizaDorso", this._activatedRoute.snapshot.paramMap.get('id'), this._activatedRoute.snapshot.paramMap.get('pos'), this._activatedRoute.snapshot.paramMap.get('pos2')], {
             transition: {
                 name: 'slideLeft'

@@ -2,6 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild  } from "@angular/core";
 import { RouterExtensions, PageRoute } from "nativescript-angular/router";
 import { Page } from "tns-core-modules/ui/page/page";
 import { GridLayout, GridUnitType, ItemSpec } from 'tns-core-modules/ui/layouts/grid-layout';
+import { topmost } from "tns-core-modules/ui/frame";
+
 
 import { Database } from "../../services/service.index";
 
@@ -123,7 +125,7 @@ export class MercosurComponent implements OnInit{
     }
 
     onButtonDorso() {
-        //this._routerExtensions.back();
+        //topmost().goBack();
         this._routerExtensions.navigate(["/polizaDorso", this._activatedRoute.snapshot.paramMap.get('id'), this._activatedRoute.snapshot.paramMap.get('pos'), this._activatedRoute.snapshot.paramMap.get('pos2')], {
             transition: {
                 name: 'slideRight'

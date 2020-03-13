@@ -4,6 +4,7 @@ import { HdiService, Database } from "../../services/service.index";
 import { TNSFancyAlert, TNSFancyAlertButton } from 'nativescript-fancyalert';
 import * as dialogs from "tns-core-modules/ui/dialogs";
 import { Page, isAndroid, isIOS } from "tns-core-modules/ui/page/page";
+import { topmost } from "tns-core-modules/ui/frame";
 
 import * as platformModule from 'tns-core-modules/platform';
 
@@ -12,7 +13,7 @@ import { Persona } from "../../models/persona";
 
 @Component({
     templateUrl: './polizas.component.html',
-    styleUrls: ['./polizas.component.css'], 
+    styleUrls: ['./polizas.component.css'],
     providers: [ AppGlobal ]
 })
 export class PolizasComponent implements OnInit {
@@ -38,7 +39,7 @@ export class PolizasComponent implements OnInit {
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -48,18 +49,18 @@ export class PolizasComponent implements OnInit {
         'titPrinc' : {
             'icon1' : 5.4,
             'paddT' : 2,
-            'paddB' : 2         
+            'paddB' : 2
         },
         'List' : {
             'padd' : 3,
-            'padd2' : 0.5, 
+            'padd2' : 0.5,
             'paddB' : 2,
             'paddB2' : 3
         },
         'ListButt' : {
-            'padd' : 0.7, 
-            'w' : 10, 
-            'h' : 7, 
+            'padd' : 0.7,
+            'w' : 10,
+            'h' : 7,
             'icon1' : 2.5,
             'ml' : 1.8,
         },
@@ -70,9 +71,9 @@ export class PolizasComponent implements OnInit {
             'mt' : 0.5
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         },
         'general' : {
@@ -88,12 +89,12 @@ export class PolizasComponent implements OnInit {
             'ssn' : 10
         }
     }
-    
+
 
     constructor(
         private _routerExtensions: RouterExtensions,
         private _hdiService: HdiService,
-        private _dataBase: Database, 
+        private _dataBase: Database,
         private _appGlobal: AppGlobal,
         page: Page
     ) {
@@ -159,7 +160,7 @@ export class PolizasComponent implements OnInit {
         this.layout.general.h4 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.general.h4);
         this.layout.general.sep = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.general.sep);
 
-        
+
         this.fileText = String.fromCharCode(0xe923);
         this.icoBin = String.fromCharCode(0xe928);
         this.icoShare = String.fromCharCode(0xe91a);
@@ -169,9 +170,9 @@ export class PolizasComponent implements OnInit {
         this.icoSSN = String.fromCharCode(0xe922);
         this.icoReload = String.fromCharCode(0xe924);
         this.icoProd = String.fromCharCode(0xe901);
-        this.icoPoliza = String.fromCharCode(0xe915); 
+        this.icoPoliza = String.fromCharCode(0xe915);
         this.icoInfo = String.fromCharCode(0xe926);
-        this.angleLeft = String.fromCharCode(0xe90c); 
+        this.angleLeft = String.fromCharCode(0xe90c);
     }
 
     onButtonHome() {
@@ -179,7 +180,7 @@ export class PolizasComponent implements OnInit {
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
 
     public ConfirmDeletePoliza(id_persona, pos, poliza) {
@@ -214,22 +215,22 @@ export class PolizasComponent implements OnInit {
             console.log("ARRAY POLIZAS - 1 = "+personaOld.polizas.length);
 
             let person = new Persona(personaOld.tipo_dni, personaOld.dni, personaOld.nombre, personaOld.fechaNacimiento, personaOld.email, personaOld.telefono, personaOld.polizas);
-            
+
 
 
             this._dataBase.deleteTarjetaCirculacion(id_persona);
             this._dataBase.getDatabase().createDocument(person);
         }
-        
+
         this.personas = this._dataBase.getTarjetasCirculacion();
     }
-    
+
     public actualizar(id_persona){
         let loader;
             if (isAndroid) {
                 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
                 loader = new LoadingIndicator();
-    
+
             } else if (isIOS) {
                 var LoadingIndicator = require("nativescript-loading-indicator").LoadingIndicator;
                 loader = new LoadingIndicator();
@@ -272,4 +273,4 @@ export class PolizasComponent implements OnInit {
             }
         )
     }
-}   
+}

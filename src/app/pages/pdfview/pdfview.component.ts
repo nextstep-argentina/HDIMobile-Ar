@@ -11,6 +11,7 @@ import { AppGlobal } from '../../shared/app.global';
 import { PDFView } from 'nativescript-pdf-view';
 import { registerElement } from 'nativescript-angular';
 import { ActivatedRoute } from "@angular/router";
+import { topmost } from "tns-core-modules/ui/frame";
 
 registerElement('PDFView', () => PDFView);
 
@@ -99,7 +100,7 @@ export class PdfviewComponent implements OnInit{
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
 
     onLoad() {

@@ -16,6 +16,7 @@ const ZXing = require("nativescript-zxing");
 
 import { AppGlobal } from '../../shared/app.global';
 import { ActivatedRoute } from '@angular/router';
+import { topmost } from "tns-core-modules/ui/frame";
 
 @Component({
     templateUrl: './visorqr.component.html',
@@ -38,7 +39,7 @@ export class VisorQrComponent implements OnInit{
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -46,15 +47,15 @@ export class VisorQrComponent implements OnInit{
             'padd' : 1.5
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         },
         'titPrinc' : {
             'icon1' : 5.4,
             'paddT' : 2,
-            'paddB' : 2         
+            'paddB' : 2
         },
         'ImgQr' :{
             'h' : 40,
@@ -100,11 +101,11 @@ export class VisorQrComponent implements OnInit{
     }
 
     ngOnInit() {
-        
+
         //orientation
         const phoneW = ( this.screen.widthPixels < this.screen.heightPixels ? this.screen.widthPixels : this.screen.heightPixels );
         const phoneH = ( this.screen.heightPixels > this.screen.widthPixels ? this.screen.heightPixels : this.screen.widthPixels );
-        
+
         //ActionBar
         this.layout.ActionBar.logo = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.ActionBar.logo);
         this.layout.ActionBar.padd = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.ActionBar.padd);
@@ -146,7 +147,7 @@ export class VisorQrComponent implements OnInit{
         this.icoShare = String.fromCharCode(0xe91a);
         this.icoSSN = String.fromCharCode(0xe922);
         this.angleLeft = String.fromCharCode(0xe90c);
-        
+
         console.log("TALLERES INIT");
     }
 
@@ -177,7 +178,7 @@ export class VisorQrComponent implements OnInit{
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
-    
+
 }

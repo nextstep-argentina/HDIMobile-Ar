@@ -2,15 +2,15 @@
     <StackLayout row="0" col="0"  verticalAlignment="middle" textAlignment="center">
         <Button text="{{angleLeft}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonPoliza()"></Button>
     </StackLayout>
-    <GridLayout row="0" col="1" height="100%" rows="*" columns="*" paddingTop="20" paddingBottom="20">
-        <GridLayout row="0" col="0" rows="auto,*,auto" columns="*" height="100%" backgroundColor="#9ee095" class="radius" paddingTop="{{layout.card.paddT}}" paddingBottom="{{layout.card.paddB}}" paddingLeft="{{layout.card.paddL}}" paddingRight="{{layout.card.paddR}}">
+    <ScrollView row="0" col="1" orientation="vertical" verticalAlignment="middle" paddingTop="20" paddingBottom="20">
+        <GridLayout row="0" col="0" rows="auto,auto,auto" columns="*" backgroundColor="#9ee095" class="radius" paddingTop="{{layout.card.paddT}}" paddingBottom="{{layout.card.paddB}}" paddingLeft="{{layout.card.paddL}}" paddingRight="{{layout.card.paddR}}">
             <StackLayout row="0" col="0" paddingBottom="{{layout.content.paddB}}" color="black" class="Uline2">
                 <Label text="Para solicitar asistencia comuníquese al" fontSize="{{layout.general.h1}}" textAlignment="center" textWrap="true"></Label>
                 <Label text="0800-333-2927 - 0800-666-2202 ó (011) 4310-8991*" fontSize="{{layout.general.h1}}" fontWeight="Bold" textAlignment="center" textWrap="true"></Label>
             </StackLayout>
-            <StackLayout row="1" col="0" height="100%" color="black" class="Uline2" verticalAlignment="middle">
-                <Label fontSize="{{layout.general.h3}}" text="La posesión de este comprobante obligatorio será prueba suficiente de la vigencia del seguro obligatorio de automotores exigido por el artículo 68 de la Ley N° 24449. Conforme al artículo 2° de la Disposición N°70/2009 de la AGENCIA NACIONAL DE SEGURIDAD VIAL, la falta de portación del recibo de pago de la prima del seguro obligatorio por parte del conductor del vehículo, no podrá ser aducida por la Autoridad de Constatación para determinar el incumplimiento de los requisitos para la circulación." textAlignment="center" textWrap="true"></Label>
-                <Label fontSize="{{layout.general.h3}}" text="TSO-AU-0116" textWrap="true"></Label>
+            <StackLayout row="1" col="0" color="black" class="Uline2" verticalAlignment="middle">
+                <Label marginTop="10" fontSize="{{layout.general.h3}}" text="La posesión de este comprobante obligatorio será prueba suficiente de la vigencia del seguro obligatorio de automotores exigido por el artículo 68 de la Ley N° 24449. Conforme al artículo 2° de la Disposición N°70/2009 de la AGENCIA NACIONAL DE SEGURIDAD VIAL, la falta de portación del recibo de pago de la prima del seguro obligatorio por parte del conductor del vehículo, no podrá ser aducida por la Autoridad de Constatación para determinar el incumplimiento de los requisitos para la circulación." textAlignment="center" textWrap="true"></Label>
+                <Label marginBottom="10" fontSize="{{layout.general.h3}}" text="TSO-AU-0116" textWrap="true"></Label>
             </StackLayout>
             <StackLayout row="2" col="0" color="black">
                 <Label fontSize="{{layout.general.h3}}" text="HDI Seguros S.A. | Tte. Gral. Juan D. Perón 650 5° Piso (C1038AAN) Buenos Aires" textWrap="true"></Label>
@@ -18,8 +18,9 @@
                 <Label fontSize="{{layout.general.h4}}" text="* Desde el exterior solicite el cobro revertido a la operadora internacional." textAlignment="right" textWrap="true"></Label>
             </StackLayout>
         </GridLayout>
-    </GridLayout>
+    </ScrollView>
     <StackLayout row="0" col="2"  verticalAlignment="middle" textAlignment="center">
         <Button text="{{angleRight}}" class="icon" width="{{layout.HistButt.w}}" height="{{layout.HistButt.h}}" padding="{{layout.HistButt.padd}}" fontSize="{{layout.HistButt.icon1}}" (tap)="onButtonMercosur()"></Button>
     </StackLayout>
 </GridLayout>
+

@@ -55,10 +55,10 @@ export class PolizaDorsoComponent implements OnInit{
             'icon1' : 2.1
         },
         'general' : {
-            'h1' : 2.75,
-            'h2' : 1.95,
-            'h3' : 1.75,
-            'h4' : 1.55,
+            'h1' : 2.5,
+            'h2' : 1.75,
+            'h3' : 1.5,
+            'h4' : 1.3,
             'sep' : 0.55
         },
         'firma' :{
@@ -126,7 +126,6 @@ export class PolizaDorsoComponent implements OnInit{
     }
 
     onButtonPoliza() {
-        //this._routerExtensions.back();
         this._routerExtensions.navigate(["/poliza", this.polizaID, this.polizaPos, this.polizaPos2], {
             transition: {
                 name: 'slideRight'
@@ -135,7 +134,6 @@ export class PolizaDorsoComponent implements OnInit{
     }
 
     onButtonMercosur() {
-        //this._routerExtensions.back();
         this._routerExtensions.navigate(["/mercosur", this.polizaID, this.polizaPos, this.polizaPos2], {
             transition: {
                 name: 'slideLeft'

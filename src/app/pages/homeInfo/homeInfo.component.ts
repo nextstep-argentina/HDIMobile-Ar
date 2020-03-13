@@ -5,6 +5,7 @@ import * as platformModule from 'tns-core-modules/platform';
 import { AppGlobal } from '../../shared/app.global';
 import { Router, NavigationEnd } from '@angular/router';
 import { Page } from "tns-core-modules/ui/page/page";
+import { topmost } from "tns-core-modules/ui/frame";
 
 @Component({
     templateUrl: './homeInfo.component.html',
@@ -14,7 +15,7 @@ import { Page } from "tns-core-modules/ui/page/page";
 export class HomeInfoComponent implements OnInit {
 
     public texto;
-    
+
     public icoCar;
     public icoTaller;
     public fileText;
@@ -31,23 +32,17 @@ export class HomeInfoComponent implements OnInit {
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
             'logo' : 9,
             'padd' : 1.5
         },
-        'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
-            'icon1' : 4
-        },
         'titPrinc' : {
             't1' : 2.25,
             'paddT' : 2,
-            'paddB' : 2           
+            'paddB' : 2
         },
         'GridLayout' : {
             'row0' : 1,
@@ -56,11 +51,11 @@ export class HomeInfoComponent implements OnInit {
         },
         'buttHome' : {
             'height' : 9.5,
-            'paddL' : 15,
-            'paddLIco' : 1.5,
-            'paddRIco' : 1.5,
-            'icon1' : 5.2,
-            'icon2' : 3,
+            'paddL' : 11,
+            'paddLIco' : 1,
+            'paddRIco' : 1,
+            'icon1' : 4.2,
+            'icon2' : 2.5,
         },
         'buttInfo' : {
             'height' : 8.5,
@@ -70,9 +65,15 @@ export class HomeInfoComponent implements OnInit {
             'icon1' : 5.2,
             'icon2' : 3,
         },
+        'HistButt' : {
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
+            'icon1' : 4
+        },
         'general' : {
-            'h1' : 2.25,
-            'h2' : 2,
+            'h1' : 2,
+            'h2' : 1.75,
             'h3' : 1.8,
             'h4' : 1.6,
             'sep' : 0.8
@@ -107,7 +108,7 @@ export class HomeInfoComponent implements OnInit {
                         this.user = 'nuestra aplicación Móvil';
                     }
                 };
-            } 
+            }
         });
     }
 
@@ -128,8 +129,8 @@ export class HomeInfoComponent implements OnInit {
         this.layout.HistButt.icon1 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.HistButt.icon1);
 
         //titPrinc
-        this.layout.titPrinc.paddT = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddT); 
-        this.layout.titPrinc.paddB = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddB);  
+        this.layout.titPrinc.paddT = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddT);
+        this.layout.titPrinc.paddB = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddB);
 
         //Button Home
         this.layout.buttHome.height = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttHome.height);
@@ -138,7 +139,7 @@ export class HomeInfoComponent implements OnInit {
         this.layout.buttHome.paddRIco = this._appGlobal.screenRes(phoneW, this.screen.scale, this.layout.buttHome.paddRIco);
         this.layout.buttHome.icon1 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttHome.icon1);
         this.layout.buttHome.icon2 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttHome.icon2);
-        
+
         //Button Info
         this.layout.buttInfo.height = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttInfo.height);
         this.layout.buttInfo.paddL = this._appGlobal.screenRes(phoneW, this.screen.scale, this.layout.buttInfo.paddL);
@@ -171,7 +172,7 @@ export class HomeInfoComponent implements OnInit {
         this.icoPoliza = String.fromCharCode(0xe915);
         this.icoDownload = String.fromCharCode(0xe91c);
         this.icoInfo = String.fromCharCode(0xe926);
-        this.icoContract = String.fromCharCode(0xe927); 
+        this.icoContract = String.fromCharCode(0xe927);
     }
 
     onButtonTap(): void {
@@ -183,7 +184,7 @@ export class HomeInfoComponent implements OnInit {
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
 
 }

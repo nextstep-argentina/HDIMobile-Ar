@@ -4,6 +4,7 @@ import * as permissions from "nativescript-permissions";
 import * as  phone from  "nativescript-phone";
 import * as email from "nativescript-email";
 import { Page } from "tns-core-modules/ui/page/page";
+import { topmost } from "tns-core-modules/ui/frame";
 
 import * as platformModule from 'tns-core-modules/platform';
 
@@ -13,7 +14,7 @@ declare var android;
 
 @Component({
     templateUrl: './infoUtil.component.html',
-    styleUrls: ['./infoUtil.component.css'], 
+    styleUrls: ['./infoUtil.component.css'],
     providers: [ AppGlobal ]
 })
 export class InfoUtilComponent implements OnInit{
@@ -28,7 +29,7 @@ export class InfoUtilComponent implements OnInit{
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -36,25 +37,25 @@ export class InfoUtilComponent implements OnInit{
             'padd' : 1.5
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         },
         'titPrinc' : {
             'icon1' : 5.4,
             'paddT' : 2,
-            'paddB' : 2          
+            'paddB' : 2
         },
         'List' : {
             'padd' : 3,
-            'padd2' : 0.5, 
+            'padd2' : 0.5,
             'paddB' : 2
         },
         'ListButt' : {
-            'padd' : 0.7, 
-            'w' : 10, 
-            'h' : 7, 
+            'padd' : 0.7,
+            'w' : 10,
+            'h' : 7,
             'icon1' : 2.5,
             'ml' : 1.8
         },
@@ -88,7 +89,7 @@ export class InfoUtilComponent implements OnInit{
         if (platformModule.isIOS) {
             phone.dial(telefono, false);
         }
-        
+
     }
 
     sendEmail(destino:string) {
@@ -104,7 +105,7 @@ export class InfoUtilComponent implements OnInit{
             }
         }).catch(error => console.error(error));
     }
- 
+
     onButtonTap(): void {
         console.log("Button was pressed");
     }
@@ -177,7 +178,7 @@ export class InfoUtilComponent implements OnInit{
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
-    
+
 }
