@@ -11,6 +11,8 @@ import * as platformModule from 'tns-core-modules/platform';
 import { AppGlobal } from "../../shared/app.global";
 import { action } from "tns-core-modules/ui/dialogs";
 
+import { topmost } from "tns-core-modules/ui/frame";
+
 import { Persona } from "../../models/persona";
 
 import { registerElement } from "nativescript-angular";
@@ -18,7 +20,7 @@ registerElement("PreviousNextView", () => require("nativescript-iqkeyboardmanage
 
 @Component({
     templateUrl: './registro.component.html',
-    styleUrls: ['./registro.component.css'], 
+    styleUrls: ['./registro.component.css'],
     providers: [ AppGlobal, TNSCheckBoxModule ],
 })
 export class RegistroComponent implements OnInit{
@@ -59,7 +61,7 @@ export class RegistroComponent implements OnInit{
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -69,30 +71,30 @@ export class RegistroComponent implements OnInit{
         'titPrinc' : {
             'icon1' : 5.4,
             'paddT' : 2,
-            'paddB' : 2       
+            'paddB' : 2
         },
         'form' : {
-            'padd' : 3,
-            'inputPaddT' : 0.8, 
-            'inputPaddB' : 1.8,
-            'inputText' : 2.3,
-            'label' : 1.8,
+            'padd' : 2,
+            'inputPaddT' : 0.8,
+            'inputPaddB' : 1.5,
+            'inputText' : 1.9,
+            'label' : 1.5,
             'buttText' : 2,
-            'buttHeight': 7,
-            'buttTermText' : 1.8,
+            'buttHeight': 6,
+            'buttTermText' : 1.6,
             'buttMt' : 2,
             'select' : 3
         },
         'ListButt' : {
-            'padd' : 0.5, 
-            'w' : 7.5, 
-            'h' : 3.5, 
+            'padd' : 0.5,
+            'w' : 7.5,
+            'h' : 3.5,
             'icon1' : 2
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         },
         'ListSelect' : {
@@ -118,7 +120,7 @@ export class RegistroComponent implements OnInit{
         private _routerExtensions: RouterExtensions,
         private _hdiService: HdiService,
         private _database: Database,
-        private _databaseUser: DatabaseUser, 
+        private _databaseUser: DatabaseUser,
         private _appGlobal: AppGlobal,
         page: Page
     ) {
@@ -126,20 +128,20 @@ export class RegistroComponent implements OnInit{
     }
 
     ngOnInit() {
-        
+
         //orientation
         const phoneW = ( this.screen.widthPixels < this.screen.heightPixels ? this.screen.widthPixels : this.screen.heightPixels );
         const phoneH = ( this.screen.heightPixels > this.screen.widthPixels ? this.screen.heightPixels : this.screen.widthPixels );
-        
+
         //ActionBar
         this.layout.ActionBar.logo = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.ActionBar.logo);
         this.layout.ActionBar.padd = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.ActionBar.padd);
 
         //titPrinc
         this.layout.titPrinc.icon1 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.icon1);
-        this.layout.titPrinc.paddT = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddT); 
-        this.layout.titPrinc.paddB = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddB);  
-        
+        this.layout.titPrinc.paddT = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddT);
+        this.layout.titPrinc.paddB = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.titPrinc.paddB);
+
         //form
         this.layout.form.padd = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.form.padd);
         this.layout.form.inputPaddT = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.form.inputPaddT);
@@ -180,8 +182,8 @@ export class RegistroComponent implements OnInit{
         this.layout.general.h4 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.general.h4);
         this.layout.general.sep = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.general.sep);
 
-        //icons        
-        this.icoSSN = String.fromCharCode(0xe922); 
+        //icons
+        this.icoSSN = String.fromCharCode(0xe922);
         this.icoEye = String.fromCharCode(0xe9cf);
         this.icoDown = String.fromCharCode(0xe90b);
         this.angleLeft = String.fromCharCode(0xe90c);
@@ -190,7 +192,7 @@ export class RegistroComponent implements OnInit{
     private getCheckProp() {
         return this.FirstCheckBox.nativeElement.checked;
     }
-    
+
     private isDate(day, month, year){
         var trigger = day + '-' + month + '-' + year,
             regexp = new RegExp(/^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/),
@@ -205,7 +207,7 @@ export class RegistroComponent implements OnInit{
             result = regexp.test(trigger);
         return result;
     }
-    
+
     private isPhone(nroPhone){
         var trigger = nroPhone,
             regexp = new RegExp(/^[0-9]{8,15}$/),
@@ -258,35 +260,35 @@ export class RegistroComponent implements OnInit{
         }
 
         if (!this.getCheckProp()) {
-            TNSFancyAlert.showError('Error','Debe aceptar los términos y condiciones','Cerrar'); 
+            TNSFancyAlert.showError('Error','Debe aceptar los términos y condiciones','Cerrar');
             return false;
         }
         return true;
     }
 
     private getCodigoDocumento(tipoDocumento: string): string {
-        switch(tipoDocumento) { 
-            case "LIBRETA ENROLAMIENTO": { 
-               return "1"; 
-            } 
-            case "LIBRETA CÍVICA": { 
+        switch(tipoDocumento) {
+            case "LIBRETA ENROLAMIENTO": {
+               return "1";
+            }
+            case "LIBRETA CÍVICA": {
                 return "2";
-            } 
+            }
             case "CÉDULA DE IDENTIDAD": {
                return "3";
-            } 
-            case "DOCUMENTO DE IDENTIDAD": { 
+            }
+            case "DOCUMENTO DE IDENTIDAD": {
                return "4";
-            }  
-            case "PASAPORTE": { 
-               return "5";             
             }
-            case "CUIT": { 
-                return "98";             
+            case "PASAPORTE": {
+               return "5";
             }
-            default : { 
-                return "4";             
-            } 
+            case "CUIT": {
+                return "98";
+            }
+            default : {
+                return "4";
+            }
         }
     }
 
@@ -297,7 +299,7 @@ export class RegistroComponent implements OnInit{
             if (isAndroid) {
                 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
                 loader = new LoadingIndicator();
-    
+
             } else if (isIOS) {
                 var LoadingIndicator = require("nativescript-loading-indicator").LoadingIndicator;
                 loader = new LoadingIndicator();
@@ -324,7 +326,7 @@ export class RegistroComponent implements OnInit{
                         result => {
                             loader.hide();
                             let polizasArr = [];
-                            let nombre: string;       
+                            let nombre: string;
                             for(let poliza of result.CertificadosAutos.Polizas) {
                                 polizasArr.push(poliza);
                                 nombre =  poliza.DatosAsegurado.Nombre;
@@ -352,12 +354,12 @@ export class RegistroComponent implements OnInit{
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
 
     doneTap(args) {
         var myTextField = args.object;
         myTextField.dismissSoftInput();
     }
-    
+
 }

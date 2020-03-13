@@ -5,6 +5,7 @@ import * as platformModule from 'tns-core-modules/platform';
 import { AppGlobal } from '../../shared/app.global';
 import { Router, NavigationEnd } from '@angular/router';
 import { Page } from "tns-core-modules/ui/page/page";
+import { topmost } from "tns-core-modules/ui/frame";
 
 
 @Component({
@@ -182,7 +183,7 @@ export class HomeComponent implements OnInit {
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
 
     public goPolizas() {

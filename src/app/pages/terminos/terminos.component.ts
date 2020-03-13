@@ -3,14 +3,15 @@ import { RouterExtensions } from "nativescript-angular/router";
 import * as platformModule from 'tns-core-modules/platform';
 import { AppGlobal } from '../../shared/app.global';
 import { Page } from "tns-core-modules/ui/page/page";
+import { topmost } from "tns-core-modules/ui/frame";
 
 @Component({
     templateUrl: './terminos.component.html',
-    styleUrls: ['./terminos.component.css'], 
+    styleUrls: ['./terminos.component.css'],
     providers: [ AppGlobal ]
 })
 export class TerminosComponent implements OnInit{
-    
+
     public icoCar;
     public angleRight;
     public angleLeft;
@@ -22,7 +23,7 @@ export class TerminosComponent implements OnInit{
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -30,19 +31,19 @@ export class TerminosComponent implements OnInit{
             'padd' : 1.5
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         },
         'titPrinc' : {
             'icon1' : 5.4,
             'paddT' : 2,
-            'paddB' : 2         
+            'paddB' : 2
         },
         'List' : {
             'padd' : 3,
-            'padd2' : 0.5, 
+            'padd2' : 0.5,
             'paddB' : 2
         },
         'buttIcon' : {
@@ -67,9 +68,9 @@ export class TerminosComponent implements OnInit{
     onButtonTap(): void {
         console.log("Button was pressed");
     }
-    
+
     constructor(
-        private _routerExtensions: RouterExtensions, 
+        private _routerExtensions: RouterExtensions,
         private _appGlobal: AppGlobal,
         page: Page
     ) {
@@ -81,7 +82,7 @@ export class TerminosComponent implements OnInit{
         //orientation
         const phoneW = ( this.screen.widthPixels < this.screen.heightPixels ? this.screen.widthPixels : this.screen.heightPixels );
         const phoneH = ( this.screen.heightPixels > this.screen.widthPixels ? this.screen.heightPixels : this.screen.widthPixels );
-        
+
         //ActionBar
         this.layout.ActionBar.logo = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.ActionBar.logo);
         this.layout.ActionBar.padd = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.ActionBar.padd);
@@ -129,11 +130,11 @@ export class TerminosComponent implements OnInit{
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
-    
+
     onButtonHome() {
         this._routerExtensions.navigate(["/home"]);
     }
-    
+
 }

@@ -10,12 +10,13 @@ import * as email from "nativescript-email";
 import * as platformModule from 'tns-core-modules/platform';
 import { AppGlobal } from '../../shared/app.global';
 import { ActivatedRoute } from '@angular/router';
+import { topmost } from "tns-core-modules/ui/frame";
 
 declare var android;
 
 @Component({
     templateUrl: './productor.component.html',
-    styleUrls: ['./productor.component.css'], 
+    styleUrls: ['./productor.component.css'],
     providers: [ AppGlobal ]
 })
 export class ProductorComponent implements OnInit{
@@ -32,7 +33,7 @@ export class ProductorComponent implements OnInit{
         'deviceType' : platformModule.device.deviceType,
         'widthPixels' : platformModule.screen.mainScreen.widthPixels,
         'heightPixels' : platformModule.screen.mainScreen.heightPixels,
-        'scale' : platformModule.screen.mainScreen.scale   
+        'scale' : platformModule.screen.mainScreen.scale
     };
     layout = {
         'ActionBar' : {
@@ -40,25 +41,25 @@ export class ProductorComponent implements OnInit{
             'padd' : 1.5
         },
         'HistButt' : {
-            'padd' : 0.5, 
-            'w' : 11, 
-            'h' : 7, 
+            'padd' : 0.5,
+            'w' : 11,
+            'h' : 7,
             'icon1' : 4
         },
         'titPrinc' : {
             'icon1' : 5.4,
             'paddT' : 2,
-            'paddB' : 2        
+            'paddB' : 2
         },
         'List' : {
             'padd' : 3,
-            'padd2' : 0.5, 
+            'padd2' : 0.5,
             'paddB' : 2
         },
         'ListButt' : {
-            'padd' : 0.7, 
-            'w' : 10, 
-            'h' : 7, 
+            'padd' : 0.7,
+            'w' : 10,
+            'h' : 7,
             'icon1' : 2.5,
             'ml' : 1.8
         },
@@ -92,7 +93,7 @@ export class ProductorComponent implements OnInit{
         if (platformModule.isIOS) {
             phone.dial(telefono, false);
         }
-        
+
     }
 
     sendEmail(destino:string) {
@@ -108,7 +109,7 @@ export class ProductorComponent implements OnInit{
             }
         }).catch(error => console.error(error));
     }
- 
+
     onButtonTap(): void {
         console.log("Button was pressed");
     }
@@ -125,7 +126,7 @@ export class ProductorComponent implements OnInit{
         let id = this._activatedRoute.snapshot.paramMap.get('id');
         let pos = this._activatedRoute.snapshot.paramMap.get('pos');
         this.poliza = this._database.getTarjetaCirculacion(id).polizas[pos];
-       
+
     }
 
     ngOnInit() {
@@ -188,7 +189,7 @@ export class ProductorComponent implements OnInit{
     }
 
     onButtonBack() {
-        this._routerExtensions.back();
+        topmost().goBack();
     }
-    
+
 }
