@@ -9,7 +9,7 @@ import * as fs from "tns-core-modules/file-system";
 import * as imageModule from "tns-core-modules/ui/image";
 
 import * as platformModule from 'tns-core-modules/platform';
-import * as SocialShare from "nativescript-social-share";
+//import * as SocialShare from "nativescript-social-share";
 
 
 const ZXing = require("nativescript-zxing");
@@ -170,7 +170,7 @@ export class VisorQrComponent implements OnInit{
     }
 
     public compartir() {
-       SocialShare.shareImage(this.img);
+     //  SocialShare.shareImage(this.img);
     }
 
     onButtonHome() {
