@@ -14,7 +14,7 @@
                     <Label text="{{icoCar}}" class="icon" fontSize="{{layout.titPrinc.icon1}}" marginBottom="{{layout.general.sep}}" textAlignment="center"></Label>
                     <Label text="¿Accidente con su vehículo?" fontWeight="Bold" fontSize="{{layout.general.h1}}" textAlignment="center"></Label>
             </StackLayout>
-            <GridLayout row="1" col="0" columns="*" rows="*" backgroundColor="white" padding="{{layout.List.padd}}">
+            <GridLayout row="1" col="0" columns="*" rows="*" backgroundColor="white" paddingTop="{{layout.List.padd}}" paddingLeft="{{layout.List.padd}}" paddingRight="{{layout.List.padd}}" paddingBottom="{{layout.List.padd}}">
                 <ScrollView orientation="vertical" height="100%" backgroundColor="white">
                         <StackLayout orientation="vertical" width="100%" class="Desc">
                                 <TextView editable="false" color="black" class="TextViewWhite" fontSize="{{layout.general.h3}}">
@@ -46,7 +46,7 @@
                                         <Span text=" Denuncia de Siniestro" fontSize="{{layout.buttIcon.t1}}"></Span>
                                     </Button>
                                 </StackLayout>
-                                <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2" marginTop="{{layout.buttIcon.mt}}">
+                                <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2" marginTop="{{layout.buttIcon.mt}}" verticalAlignment="middle">
                                     <Button class="buttIcon" borderRadius="2" [nsRouterLink]="['/infoUtil']">
                                         <Span text="{{icoPhone}}" class="icon" fontSize="{{layout.buttIcon.icon1}}"></Span>
                                         <Span text=" Servicio de Asistencia" fontSize="{{layout.buttIcon.t1}}"></Span>
