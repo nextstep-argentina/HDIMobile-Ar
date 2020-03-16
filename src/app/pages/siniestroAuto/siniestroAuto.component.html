@@ -14,9 +14,9 @@
                     <Label text="{{icoCar}}" class="icon" fontSize="{{layout.titPrinc.icon1}}" marginBottom="{{layout.general.sep}}" textAlignment="center"></Label>
                     <Label text="¿Accidente con su vehículo?" fontWeight="Bold" fontSize="{{layout.general.h1}}" textAlignment="center"></Label>
             </StackLayout>
-            <GridLayout row="1" col="0" columns="*" rows="*" backgroundColor="white">
+            <GridLayout row="1" col="0" columns="*" rows="*" backgroundColor="white" paddingTop="{{layout.List.padd}}" paddingLeft="{{layout.List.padd}}" paddingRight="{{layout.List.padd}}" paddingBottom="{{layout.List.padd}}">
                 <ScrollView orientation="vertical" height="100%" backgroundColor="white">
-                        <StackLayout orientation="vertical" width="100%" class="Desc">
+                        <StackLayout orientation="vertical" width="100%" class="Desc" paddingBottom="{{layout.List.padd}}">
                             <TextView editable="false" color="black" class="TextViewWhite" fontSize="{{layout.general.h3}}">
                                 <FormattedString>
                                     <Span text="Ante la ocurrencia de un siniestro en su automóvil:&#x000a;" color="#006729" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
