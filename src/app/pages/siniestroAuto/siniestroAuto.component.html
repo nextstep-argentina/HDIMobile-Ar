@@ -15,44 +15,44 @@
                     <Label text="¿Accidente con su vehículo?" fontWeight="Bold" fontSize="{{layout.general.h1}}" textAlignment="center"></Label>
             </StackLayout>
             <GridLayout row="1" col="0" columns="*" rows="*" backgroundColor="white" paddingTop="{{layout.List.padd}}" paddingLeft="{{layout.List.padd}}" paddingRight="{{layout.List.padd}}" paddingBottom="{{layout.List.padd}}">
-                <ScrollView orientation="vertical" height="100%" backgroundColor="white">
+                <ScrollView orientation="vertical" height="100%" paddingBottom="{{layout.List.padd}}" backgroundColor="white">
                         <StackLayout orientation="vertical" width="100%" class="Desc">
-                                <TextView editable="false" color="black" class="TextViewWhite" fontSize="{{layout.general.h3}}">
-                                    <FormattedString>
-                                        <Span text="Ante la ocurrencia de un siniestro en su automóvil:&#x000a;" color="#006729" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
-                                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
-                                        <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
-                                        <Span text=" Informe a la COMPAÑÍA DE SEGUROS dentro de los tres días y lo más ampliamente posible sobre el siniestro, tenga o no daño el vehículo asegurado.&#x000a;"></Span>
-                                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
-                                        <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
-                                        <Span text=" Dé inmediata intervención a la autoridad policial más cercana al lugar del hecho en todos los casos.&#x000a;"></Span>
-                                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
-                                        <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
-                                        <Span text=" Remita a la COMPAÑÍA DE SEGUROS copia del sumario o acta de choque instruida en la seccional respectiva.&#x000a;"></Span>
-                                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
-                                        <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
-                                        <Span text=" No acepte reclamaciones, no haga transacciones ni reconozca indemnizaciones, sin autorización por escrito de la COMPAÑÍA DE SEGUROS.&#x000a;"></Span>
-                                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
-                                        <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
-                                        <Span text=" No abandone su vehículo: llévelo o hágalo trasladar a un taller.&#x000a;"></Span>
-                                        <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
-                                        <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
-                                        <Span text=" No ordene ni realice arreglos sin previa autorización de la Compañía."></Span>
-                                    </FormattedString>
-                                </TextView>
-                                <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2">
-                                    <Button class="buttIcon" borderRadius="2" [nsRouterLink]="['/pdfview','siniestroauto']">
-                                        <Span text="{{icoPDF}}" class="icon" fontSize="{{layout.buttIcon.icon1}}"></Span>
-                                        <Span text=" Denuncia de Siniestro" fontSize="{{layout.buttIcon.t1}}"></Span>
-                                    </Button>
-                                </StackLayout>
-                                <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2" marginTop="{{layout.buttIcon.mt}}" verticalAlignment="middle">
-                                    <Button class="buttIcon" borderRadius="2" [nsRouterLink]="['/infoUtil']">
-                                        <Span text="{{icoPhone}}" class="icon" fontSize="{{layout.buttIcon.icon1}}"></Span>
-                                        <Span text=" Servicio de Asistencia" fontSize="{{layout.buttIcon.t1}}"></Span>
-                                    </Button>
-                                </StackLayout>
+                            <TextView editable="false" color="black" class="TextViewWhite" fontSize="{{layout.general.h3}}">
+                                <FormattedString>
+                                    <Span text="Ante la ocurrencia de un siniestro en su automóvil:&#x000a;" color="#006729" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
+                                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                                    <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
+                                    <Span text=" Informe a la COMPAÑÍA DE SEGUROS dentro de los tres días y lo más ampliamente posible sobre el siniestro, tenga o no daño el vehículo asegurado.&#x000a;"></Span>
+                                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                                    <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
+                                    <Span text=" Dé inmediata intervención a la autoridad policial más cercana al lugar del hecho en todos los casos.&#x000a;"></Span>
+                                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                                    <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
+                                    <Span text=" Remita a la COMPAÑÍA DE SEGUROS copia del sumario o acta de choque instruida en la seccional respectiva.&#x000a;"></Span>
+                                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                                    <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
+                                    <Span text=" No acepte reclamaciones, no haga transacciones ni reconozca indemnizaciones, sin autorización por escrito de la COMPAÑÍA DE SEGUROS.&#x000a;"></Span>
+                                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                                    <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
+                                    <Span text=" No abandone su vehículo: llévelo o hágalo trasladar a un taller.&#x000a;"></Span>
+                                    <Span text="&#x000a;" fontSize="{{layout.general.sep}}"></Span>
+                                    <Span text="{{angleRight}}" class="icon" fontSize="{{layout.general.iconUl}}"></Span>
+                                    <Span text=" No ordene ni realice arreglos sin previa autorización de la Compañía."></Span>
+                                </FormattedString>
+                            </TextView>
+                            <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2">
+                                <Button class="buttIcon" borderRadius="2" [nsRouterLink]="['/pdfview','siniestroauto']">
+                                    <Span text="{{icoPDF}}" class="icon" fontSize="{{layout.buttIcon.icon1}}"></Span>
+                                    <Span text=" Denuncia de Siniestro" fontSize="{{layout.buttIcon.t1}}"></Span>
+                                </Button>
                             </StackLayout>
+                            <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2" marginTop="{{layout.buttIcon.mt}}" verticalAlignment="middle">
+                                <Button class="buttIcon" borderRadius="2" [nsRouterLink]="['/infoUtil']">
+                                    <Span text="{{icoPhone}}" class="icon" fontSize="{{layout.buttIcon.icon1}}"></Span>
+                                    <Span text=" Servicio de Asistencia" fontSize="{{layout.buttIcon.t1}}"></Span>
+                                </Button>
+                            </StackLayout>
+                        </StackLayout>
                 </ScrollView>
             </GridLayout>
             <StackLayout row="2" col="0" colSpan="2" color="white" verticalAlignment="bottom" marginTop="{{layout.footer.paddT}}" marginBottom="{{layout.footer.paddB}}">
