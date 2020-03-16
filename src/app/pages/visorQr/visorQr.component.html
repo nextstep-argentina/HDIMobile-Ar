@@ -17,7 +17,7 @@
                 <StackLayout height="{{layout.ImgQr.h}}">
                     <Image [src]="img"></Image>
                 </StackLayout>
-                <StackLayout width="40%" backgroundColor="#006729" height="{{layout.buttQr.h}}" borderRadius="2" marginTop="{{layout.buttQr.mt}}">
+                <StackLayout width="40%" backgroundColor="#006729" height="{{layout.buttQr.h}}" borderRadius="2" verticalAlignment="middle" marginTop="{{layout.buttQr.mt}}">
                     <Button class="buttQr" borderRadius="2" (tap)="compartir()">
                         <Span text="{{icoShare}}" class="icon" fontSize="{{layout.buttQr.icon1}}"></Span>
                         <Span text=" COMPARTIR" fontSize="{{layout.buttQr.t1}}"></Span>

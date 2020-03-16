@@ -13,9 +13,9 @@
             <StackLayout row="0" col="0" color="white" paddingTop="{{layout.titPrinc.paddT}}" paddingBottom="{{layout.titPrinc.paddB}}">
                 <Label text="Términos y Condiciones" fontWeight="Bold" fontSize="{{layout.general.h1}}"  textAlignment="center"></Label>
             </StackLayout>
-            <GridLayout row="1" col="0" columns="*" rows="*" backgroundColor="white" padding="{{layout.List.padd}}">
+            <GridLayout row="1" col="0" columns="*" rows="*" backgroundColor="white" paddingTop="{{layout.List.padd}}" paddingLeft="{{layout.List.padd}}" paddingRight="{{layout.List.padd}}" paddingBottom="{{layout.List.padd}}">
                 <ScrollView orientation="vertical" height="100%" backgroundColor="white">
-                        <StackLayout orientation="vertical" width="100%" class="Desc">
+                        <StackLayout orientation="vertical" width="100%" class="Desc" paddingBottom="{{layout.List.padd}}">
                                 <TextView row="0" col="0" editable="false" color="black" class="TextViewWhite" fontSize="{{layout.general.h3}}">
                                     <FormattedString>
                                         <Span text="Términos y Condiciones HDI Seguros App.&#x000a;" color="#006729" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
@@ -88,7 +88,7 @@
                                         <Span text='&#x000a;El Usuario acepta que todo conflicto de intereses o diferencia que pueda surgir como consecuencia del uso de la Aplicación será resuelto de acuerdo con la legislación vigente en la República Argentina sometiéndose a la jurisdicción y competencia de los Tribunales Ordinarios de la Ciudad de Buenos Aires (República Argentina), renunciando expresamente a todo otro fuero o jurisdicción que pudiere corresponder.'></Span>
                                     </FormattedString>
                                 </TextView>
-                                <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2">
+                                <StackLayout width="80%" backgroundColor="#006729" height="{{layout.buttIcon.h}}" borderRadius="2" verticalAlignment="middle" marginTop="{{layout.buttIcon.mt}}">
                                     <Button class="buttIcon" borderRadius="2" (tap)="onButtonBack()">
                                         <Span text="Volver" fontSize="{{layout.general.h1}}"></Span>
                                     </Button>

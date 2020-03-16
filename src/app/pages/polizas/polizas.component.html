@@ -33,19 +33,19 @@
                                                 <Span text="{{certificado.TarjetaCirculacion.Desde}} {{certificado.TarjetaCirculacion.Hasta}}" color="#555555" fontWeight="Bold" fontSize="{{layout.general.h2}}"></Span>
                                             </FormattedString>
                                         </TextView>
-                                        <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                                        <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729" verticalAlignment="middle">
                                             <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/poliza', persona._id, persona.polizas.indexOf(poliza), poliza.Certificados.indexOf(certificado)]"></Button>
                                         </StackLayout>
 
-                                        <StackLayout row="0" col="2" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                                        <StackLayout row="0" col="2" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729" verticalAlignment="middle">
                                             <Button text="{{icoPhone}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/productor', persona._id,persona.polizas.indexOf(poliza)]"></Button>
                                         </StackLayout>
 
-                                        <StackLayout row="0" col="3" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                                        <StackLayout row="0" col="3" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729" verticalAlignment="middle">
                                             <Button text="{{codigoQR}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/visorqr', persona._id,persona.polizas.indexOf(poliza), poliza.Certificados.indexOf(certificado)]"></Button>
                                         </StackLayout>
 
-                                        <StackLayout row="0" col="4" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                                        <StackLayout row="0" col="4" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729" verticalAlignment="middle">
                                             <Button text="{{icoBin}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" (tap)="ConfirmDeletePoliza(persona._id, persona.polizas.indexOf(poliza),poliza)"></Button>
                                         </StackLayout>
                                     </GridLayout>
@@ -74,7 +74,7 @@
                                     <Span text="Consulte las Condiciones Generales de la Póliza de Automóviles" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729" verticalAlignment="middle">
                             <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/pdfview','condgralauto']"></Button>
                             </StackLayout>
                         </GridLayout>
@@ -84,7 +84,7 @@
                                     <Span text="Consulte las Condiciones Generales de la Póliza de RC Automóviles" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729" verticalAlignment="middle">
                                 <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/pdfview','condrcautoweb']"></Button>
                             </StackLayout>
                         </GridLayout>
@@ -94,7 +94,7 @@
                                     <Span text="Consulte las Condiciones Generales de los Servicios de Asistencia" color="black" fontWeight="Bold" fontSize="{{layout.general.h1}}"></Span>
                                 </FormattedString>
                             </TextView>
-                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729">
+                            <StackLayout row="0" col="1" width="{{layout.ListButt.w}}" height="{{layout.ListButt.h}}" marginLeft="{{layout.ListButt.ml}}" borderRadius="2" backgroundColor="#006729" verticalAlignment="middle">
                                 <Button text="{{icoEye}}" class="icon ListButt" padding="{{layout.ListButt.padd}}" borderRadius="2" fontSize="{{layout.ListButt.icon1}}" [nsRouterLink]="['/pdfview','servasistauto']"></Button>
                             </StackLayout>
                         </GridLayout>

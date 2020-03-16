@@ -48,7 +48,8 @@ export class TerminosComponent implements OnInit{
         },
         'buttIcon' : {
             'h' : 7,
-            'icon1' : 3
+            'icon1' : 3,
+            'mt' : 1
         },
         'general' : {
             'iconUl' : 1.8,
@@ -106,6 +107,7 @@ export class TerminosComponent implements OnInit{
         //buttIcon
         this.layout.buttIcon.h = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttIcon.h);
         this.layout.buttIcon.icon1 = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttIcon.icon1);
+        this.layout.buttIcon.mt = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.buttIcon.mt);
 
         //footer
         this.layout.footer.paddB = this._appGlobal.screenRes(phoneH, this.screen.scale, this.layout.footer.paddB);
