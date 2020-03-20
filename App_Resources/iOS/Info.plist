@@ -4,6 +4,7 @@
 <dict>
 	<key>UIUserInterfaceStyle</key>
     <string>Light</string>
+
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
